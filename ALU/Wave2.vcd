@@ -1,0 +1,3115 @@
+$date
+	Wed Sep 18 19:46:49 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module comparator_tb $end
+$var wire 32 ! A [31:0] $end
+$var wire 32 " B [31:0] $end
+$var wire 1 # GT0 $end
+$var wire 1 $ EQ0 $end
+$scope module compare $end
+$var wire 32 % A [31:0] $end
+$var wire 32 & B [31:0] $end
+$var wire 1 ' ngt $end
+$var wire 2 ( select [1:0] $end
+$var wire 1 ) gtcomp $end
+$var wire 1 * gt9 $end
+$var wire 1 + gt8 $end
+$var wire 1 , gt7 $end
+$var wire 1 - gt6 $end
+$var wire 1 . gt5 $end
+$var wire 1 / gt4 $end
+$var wire 1 0 gt3 $end
+$var wire 1 1 gt2 $end
+$var wire 1 2 gt15 $end
+$var wire 1 3 gt14 $end
+$var wire 1 4 gt13 $end
+$var wire 1 5 gt12 $end
+$var wire 1 6 gt11 $end
+$var wire 1 7 gt10 $end
+$var wire 1 8 gt1 $end
+$var wire 1 9 eq9 $end
+$var wire 1 : eq8 $end
+$var wire 1 ; eq7 $end
+$var wire 1 < eq6 $end
+$var wire 1 = eq5 $end
+$var wire 1 > eq4 $end
+$var wire 1 ? eq3 $end
+$var wire 1 @ eq2 $end
+$var wire 1 A eq15 $end
+$var wire 1 B eq14 $end
+$var wire 1 C eq13 $end
+$var wire 1 D eq12 $end
+$var wire 1 E eq11 $end
+$var wire 1 F eq10 $end
+$var wire 1 G eq1 $end
+$var wire 1 # GT0 $end
+$var wire 1 $ EQ0 $end
+$scope module MUXGT $end
+$var wire 1 H in1 $end
+$var wire 1 I in2 $end
+$var wire 1 ' in3 $end
+$var wire 2 J select [1:0] $end
+$var wire 1 K w2 $end
+$var wire 1 L w1 $end
+$var wire 1 # out $end
+$var wire 1 ) in0 $end
+$scope module first_bottom $end
+$var wire 1 I in0 $end
+$var wire 1 ' in1 $end
+$var wire 1 M select $end
+$var wire 1 K out $end
+$upscope $end
+$scope module first_top $end
+$var wire 1 H in1 $end
+$var wire 1 N select $end
+$var wire 1 L out $end
+$var wire 1 ) in0 $end
+$upscope $end
+$scope module second $end
+$var wire 1 L in0 $end
+$var wire 1 K in1 $end
+$var wire 1 O select $end
+$var wire 1 # out $end
+$upscope $end
+$upscope $end
+$scope module compare1 $end
+$var wire 2 P A [1:0] $end
+$var wire 2 Q B [1:0] $end
+$var wire 1 A EQ0 $end
+$var wire 1 R EQ1 $end
+$var wire 1 2 GT0 $end
+$var wire 1 S GT1 $end
+$var wire 1 T notB0 $end
+$var wire 1 U notEQ1 $end
+$var wire 1 V notGT1 $end
+$var wire 1 W w1 $end
+$var wire 1 X w2 $end
+$var wire 3 Y select [2:0] $end
+$var wire 1 Z muxgt $end
+$var wire 1 [ muxeq $end
+$scope module EQMUX $end
+$var wire 1 T in0 $end
+$var wire 1 \ in1 $end
+$var wire 1 ] in2 $end
+$var wire 1 ^ in3 $end
+$var wire 1 _ in4 $end
+$var wire 1 T in5 $end
+$var wire 1 ` in6 $end
+$var wire 1 a in7 $end
+$var wire 3 b select [2:0] $end
+$var wire 1 c w6 $end
+$var wire 1 d w5 $end
+$var wire 1 e w4 $end
+$var wire 1 f w3 $end
+$var wire 1 g w2 $end
+$var wire 1 h w1 $end
+$var wire 1 [ out $end
+$scope module first_1 $end
+$var wire 1 T in0 $end
+$var wire 1 \ in1 $end
+$var wire 1 i select $end
+$var wire 1 h out $end
+$upscope $end
+$scope module first_2 $end
+$var wire 1 ] in0 $end
+$var wire 1 ^ in1 $end
+$var wire 1 j select $end
+$var wire 1 g out $end
+$upscope $end
+$scope module first_3 $end
+$var wire 1 _ in0 $end
+$var wire 1 T in1 $end
+$var wire 1 k select $end
+$var wire 1 f out $end
+$upscope $end
+$scope module first_4 $end
+$var wire 1 ` in0 $end
+$var wire 1 a in1 $end
+$var wire 1 l select $end
+$var wire 1 e out $end
+$upscope $end
+$scope module second_1 $end
+$var wire 1 h in0 $end
+$var wire 1 g in1 $end
+$var wire 1 m select $end
+$var wire 1 d out $end
+$upscope $end
+$scope module second_2 $end
+$var wire 1 f in0 $end
+$var wire 1 e in1 $end
+$var wire 1 n select $end
+$var wire 1 c out $end
+$upscope $end
+$scope module third $end
+$var wire 1 d in0 $end
+$var wire 1 c in1 $end
+$var wire 1 o select $end
+$var wire 1 [ out $end
+$upscope $end
+$upscope $end
+$scope module GTMUX $end
+$var wire 1 p in0 $end
+$var wire 1 q in1 $end
+$var wire 1 T in2 $end
+$var wire 1 r in3 $end
+$var wire 1 s in4 $end
+$var wire 1 t in5 $end
+$var wire 1 u in6 $end
+$var wire 1 T in7 $end
+$var wire 3 v select [2:0] $end
+$var wire 1 w w6 $end
+$var wire 1 x w5 $end
+$var wire 1 y w4 $end
+$var wire 1 z w3 $end
+$var wire 1 { w2 $end
+$var wire 1 | w1 $end
+$var wire 1 Z out $end
+$scope module first_1 $end
+$var wire 1 p in0 $end
+$var wire 1 q in1 $end
+$var wire 1 } select $end
+$var wire 1 | out $end
+$upscope $end
+$scope module first_2 $end
+$var wire 1 T in0 $end
+$var wire 1 r in1 $end
+$var wire 1 ~ select $end
+$var wire 1 { out $end
+$upscope $end
+$scope module first_3 $end
+$var wire 1 s in0 $end
+$var wire 1 t in1 $end
+$var wire 1 !" select $end
+$var wire 1 z out $end
+$upscope $end
+$scope module first_4 $end
+$var wire 1 u in0 $end
+$var wire 1 T in1 $end
+$var wire 1 "" select $end
+$var wire 1 y out $end
+$upscope $end
+$scope module second_1 $end
+$var wire 1 | in0 $end
+$var wire 1 { in1 $end
+$var wire 1 #" select $end
+$var wire 1 x out $end
+$upscope $end
+$scope module second_2 $end
+$var wire 1 z in0 $end
+$var wire 1 y in1 $end
+$var wire 1 $" select $end
+$var wire 1 w out $end
+$upscope $end
+$scope module third $end
+$var wire 1 x in0 $end
+$var wire 1 w in1 $end
+$var wire 1 %" select $end
+$var wire 1 Z out $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module compare10 $end
+$var wire 2 &" A [1:0] $end
+$var wire 2 '" B [1:0] $end
+$var wire 1 < EQ0 $end
+$var wire 1 - GT0 $end
+$var wire 1 (" notB0 $end
+$var wire 1 )" notEQ1 $end
+$var wire 1 *" notGT1 $end
+$var wire 1 +" w1 $end
+$var wire 1 ," w2 $end
+$var wire 3 -" select [2:0] $end
+$var wire 1 ." muxgt $end
+$var wire 1 /" muxeq $end
+$var wire 1 , GT1 $end
+$var wire 1 ; EQ1 $end
+$scope module EQMUX $end
+$var wire 1 (" in0 $end
+$var wire 1 0" in1 $end
+$var wire 1 1" in2 $end
+$var wire 1 2" in3 $end
+$var wire 1 3" in4 $end
+$var wire 1 (" in5 $end
+$var wire 1 4" in6 $end
+$var wire 1 5" in7 $end
+$var wire 3 6" select [2:0] $end
+$var wire 1 7" w6 $end
+$var wire 1 8" w5 $end
+$var wire 1 9" w4 $end
+$var wire 1 :" w3 $end
+$var wire 1 ;" w2 $end
+$var wire 1 <" w1 $end
+$var wire 1 /" out $end
+$scope module first_1 $end
+$var wire 1 (" in0 $end
+$var wire 1 0" in1 $end
+$var wire 1 =" select $end
+$var wire 1 <" out $end
+$upscope $end
+$scope module first_2 $end
+$var wire 1 1" in0 $end
+$var wire 1 2" in1 $end
+$var wire 1 >" select $end
+$var wire 1 ;" out $end
+$upscope $end
+$scope module first_3 $end
+$var wire 1 3" in0 $end
+$var wire 1 (" in1 $end
+$var wire 1 ?" select $end
+$var wire 1 :" out $end
+$upscope $end
+$scope module first_4 $end
+$var wire 1 4" in0 $end
+$var wire 1 5" in1 $end
+$var wire 1 @" select $end
+$var wire 1 9" out $end
+$upscope $end
+$scope module second_1 $end
+$var wire 1 <" in0 $end
+$var wire 1 ;" in1 $end
+$var wire 1 A" select $end
+$var wire 1 8" out $end
+$upscope $end
+$scope module second_2 $end
+$var wire 1 :" in0 $end
+$var wire 1 9" in1 $end
+$var wire 1 B" select $end
+$var wire 1 7" out $end
+$upscope $end
+$scope module third $end
+$var wire 1 8" in0 $end
+$var wire 1 7" in1 $end
+$var wire 1 C" select $end
+$var wire 1 /" out $end
+$upscope $end
+$upscope $end
+$scope module GTMUX $end
+$var wire 1 D" in0 $end
+$var wire 1 E" in1 $end
+$var wire 1 (" in2 $end
+$var wire 1 F" in3 $end
+$var wire 1 G" in4 $end
+$var wire 1 H" in5 $end
+$var wire 1 I" in6 $end
+$var wire 1 (" in7 $end
+$var wire 3 J" select [2:0] $end
+$var wire 1 K" w6 $end
+$var wire 1 L" w5 $end
+$var wire 1 M" w4 $end
+$var wire 1 N" w3 $end
+$var wire 1 O" w2 $end
+$var wire 1 P" w1 $end
+$var wire 1 ." out $end
+$scope module first_1 $end
+$var wire 1 D" in0 $end
+$var wire 1 E" in1 $end
+$var wire 1 Q" select $end
+$var wire 1 P" out $end
+$upscope $end
+$scope module first_2 $end
+$var wire 1 (" in0 $end
+$var wire 1 F" in1 $end
+$var wire 1 R" select $end
+$var wire 1 O" out $end
+$upscope $end
+$scope module first_3 $end
+$var wire 1 G" in0 $end
+$var wire 1 H" in1 $end
+$var wire 1 S" select $end
+$var wire 1 N" out $end
+$upscope $end
+$scope module first_4 $end
+$var wire 1 I" in0 $end
+$var wire 1 (" in1 $end
+$var wire 1 T" select $end
+$var wire 1 M" out $end
+$upscope $end
+$scope module second_1 $end
+$var wire 1 P" in0 $end
+$var wire 1 O" in1 $end
+$var wire 1 U" select $end
+$var wire 1 L" out $end
+$upscope $end
+$scope module second_2 $end
+$var wire 1 N" in0 $end
+$var wire 1 M" in1 $end
+$var wire 1 V" select $end
+$var wire 1 K" out $end
+$upscope $end
+$scope module third $end
+$var wire 1 L" in0 $end
+$var wire 1 K" in1 $end
+$var wire 1 W" select $end
+$var wire 1 ." out $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module compare11 $end
+$var wire 2 X" A [1:0] $end
+$var wire 2 Y" B [1:0] $end
+$var wire 1 = EQ0 $end
+$var wire 1 < EQ1 $end
+$var wire 1 . GT0 $end
+$var wire 1 - GT1 $end
+$var wire 1 Z" notB0 $end
+$var wire 1 [" notEQ1 $end
+$var wire 1 \" notGT1 $end
+$var wire 1 ]" w1 $end
+$var wire 1 ^" w2 $end
+$var wire 3 _" select [2:0] $end
+$var wire 1 `" muxgt $end
+$var wire 1 a" muxeq $end
+$scope module EQMUX $end
+$var wire 1 Z" in0 $end
+$var wire 1 b" in1 $end
+$var wire 1 c" in2 $end
+$var wire 1 d" in3 $end
+$var wire 1 e" in4 $end
+$var wire 1 Z" in5 $end
+$var wire 1 f" in6 $end
+$var wire 1 g" in7 $end
+$var wire 3 h" select [2:0] $end
+$var wire 1 i" w6 $end
+$var wire 1 j" w5 $end
+$var wire 1 k" w4 $end
+$var wire 1 l" w3 $end
+$var wire 1 m" w2 $end
+$var wire 1 n" w1 $end
+$var wire 1 a" out $end
+$scope module first_1 $end
+$var wire 1 Z" in0 $end
+$var wire 1 b" in1 $end
+$var wire 1 o" select $end
+$var wire 1 n" out $end
+$upscope $end
+$scope module first_2 $end
+$var wire 1 c" in0 $end
+$var wire 1 d" in1 $end
+$var wire 1 p" select $end
+$var wire 1 m" out $end
+$upscope $end
+$scope module first_3 $end
+$var wire 1 e" in0 $end
+$var wire 1 Z" in1 $end
+$var wire 1 q" select $end
+$var wire 1 l" out $end
+$upscope $end
+$scope module first_4 $end
+$var wire 1 f" in0 $end
+$var wire 1 g" in1 $end
+$var wire 1 r" select $end
+$var wire 1 k" out $end
+$upscope $end
+$scope module second_1 $end
+$var wire 1 n" in0 $end
+$var wire 1 m" in1 $end
+$var wire 1 s" select $end
+$var wire 1 j" out $end
+$upscope $end
+$scope module second_2 $end
+$var wire 1 l" in0 $end
+$var wire 1 k" in1 $end
+$var wire 1 t" select $end
+$var wire 1 i" out $end
+$upscope $end
+$scope module third $end
+$var wire 1 j" in0 $end
+$var wire 1 i" in1 $end
+$var wire 1 u" select $end
+$var wire 1 a" out $end
+$upscope $end
+$upscope $end
+$scope module GTMUX $end
+$var wire 1 v" in0 $end
+$var wire 1 w" in1 $end
+$var wire 1 Z" in2 $end
+$var wire 1 x" in3 $end
+$var wire 1 y" in4 $end
+$var wire 1 z" in5 $end
+$var wire 1 {" in6 $end
+$var wire 1 Z" in7 $end
+$var wire 3 |" select [2:0] $end
+$var wire 1 }" w6 $end
+$var wire 1 ~" w5 $end
+$var wire 1 !# w4 $end
+$var wire 1 "# w3 $end
+$var wire 1 ## w2 $end
+$var wire 1 $# w1 $end
+$var wire 1 `" out $end
+$scope module first_1 $end
+$var wire 1 v" in0 $end
+$var wire 1 w" in1 $end
+$var wire 1 %# select $end
+$var wire 1 $# out $end
+$upscope $end
+$scope module first_2 $end
+$var wire 1 Z" in0 $end
+$var wire 1 x" in1 $end
+$var wire 1 &# select $end
+$var wire 1 ## out $end
+$upscope $end
+$scope module first_3 $end
+$var wire 1 y" in0 $end
+$var wire 1 z" in1 $end
+$var wire 1 '# select $end
+$var wire 1 "# out $end
+$upscope $end
+$scope module first_4 $end
+$var wire 1 {" in0 $end
+$var wire 1 Z" in1 $end
+$var wire 1 (# select $end
+$var wire 1 !# out $end
+$upscope $end
+$scope module second_1 $end
+$var wire 1 $# in0 $end
+$var wire 1 ## in1 $end
+$var wire 1 )# select $end
+$var wire 1 ~" out $end
+$upscope $end
+$scope module second_2 $end
+$var wire 1 "# in0 $end
+$var wire 1 !# in1 $end
+$var wire 1 *# select $end
+$var wire 1 }" out $end
+$upscope $end
+$scope module third $end
+$var wire 1 ~" in0 $end
+$var wire 1 }" in1 $end
+$var wire 1 +# select $end
+$var wire 1 `" out $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module compare12 $end
+$var wire 2 ,# A [1:0] $end
+$var wire 2 -# B [1:0] $end
+$var wire 1 > EQ0 $end
+$var wire 1 = EQ1 $end
+$var wire 1 / GT0 $end
+$var wire 1 . GT1 $end
+$var wire 1 .# notB0 $end
+$var wire 1 /# notEQ1 $end
+$var wire 1 0# notGT1 $end
+$var wire 1 1# w1 $end
+$var wire 1 2# w2 $end
+$var wire 3 3# select [2:0] $end
+$var wire 1 4# muxgt $end
+$var wire 1 5# muxeq $end
+$scope module EQMUX $end
+$var wire 1 .# in0 $end
+$var wire 1 6# in1 $end
+$var wire 1 7# in2 $end
+$var wire 1 8# in3 $end
+$var wire 1 9# in4 $end
+$var wire 1 .# in5 $end
+$var wire 1 :# in6 $end
+$var wire 1 ;# in7 $end
+$var wire 3 <# select [2:0] $end
+$var wire 1 =# w6 $end
+$var wire 1 ># w5 $end
+$var wire 1 ?# w4 $end
+$var wire 1 @# w3 $end
+$var wire 1 A# w2 $end
+$var wire 1 B# w1 $end
+$var wire 1 5# out $end
+$scope module first_1 $end
+$var wire 1 .# in0 $end
+$var wire 1 6# in1 $end
+$var wire 1 C# select $end
+$var wire 1 B# out $end
+$upscope $end
+$scope module first_2 $end
+$var wire 1 7# in0 $end
+$var wire 1 8# in1 $end
+$var wire 1 D# select $end
+$var wire 1 A# out $end
+$upscope $end
+$scope module first_3 $end
+$var wire 1 9# in0 $end
+$var wire 1 .# in1 $end
+$var wire 1 E# select $end
+$var wire 1 @# out $end
+$upscope $end
+$scope module first_4 $end
+$var wire 1 :# in0 $end
+$var wire 1 ;# in1 $end
+$var wire 1 F# select $end
+$var wire 1 ?# out $end
+$upscope $end
+$scope module second_1 $end
+$var wire 1 B# in0 $end
+$var wire 1 A# in1 $end
+$var wire 1 G# select $end
+$var wire 1 ># out $end
+$upscope $end
+$scope module second_2 $end
+$var wire 1 @# in0 $end
+$var wire 1 ?# in1 $end
+$var wire 1 H# select $end
+$var wire 1 =# out $end
+$upscope $end
+$scope module third $end
+$var wire 1 ># in0 $end
+$var wire 1 =# in1 $end
+$var wire 1 I# select $end
+$var wire 1 5# out $end
+$upscope $end
+$upscope $end
+$scope module GTMUX $end
+$var wire 1 J# in0 $end
+$var wire 1 K# in1 $end
+$var wire 1 .# in2 $end
+$var wire 1 L# in3 $end
+$var wire 1 M# in4 $end
+$var wire 1 N# in5 $end
+$var wire 1 O# in6 $end
+$var wire 1 .# in7 $end
+$var wire 3 P# select [2:0] $end
+$var wire 1 Q# w6 $end
+$var wire 1 R# w5 $end
+$var wire 1 S# w4 $end
+$var wire 1 T# w3 $end
+$var wire 1 U# w2 $end
+$var wire 1 V# w1 $end
+$var wire 1 4# out $end
+$scope module first_1 $end
+$var wire 1 J# in0 $end
+$var wire 1 K# in1 $end
+$var wire 1 W# select $end
+$var wire 1 V# out $end
+$upscope $end
+$scope module first_2 $end
+$var wire 1 .# in0 $end
+$var wire 1 L# in1 $end
+$var wire 1 X# select $end
+$var wire 1 U# out $end
+$upscope $end
+$scope module first_3 $end
+$var wire 1 M# in0 $end
+$var wire 1 N# in1 $end
+$var wire 1 Y# select $end
+$var wire 1 T# out $end
+$upscope $end
+$scope module first_4 $end
+$var wire 1 O# in0 $end
+$var wire 1 .# in1 $end
+$var wire 1 Z# select $end
+$var wire 1 S# out $end
+$upscope $end
+$scope module second_1 $end
+$var wire 1 V# in0 $end
+$var wire 1 U# in1 $end
+$var wire 1 [# select $end
+$var wire 1 R# out $end
+$upscope $end
+$scope module second_2 $end
+$var wire 1 T# in0 $end
+$var wire 1 S# in1 $end
+$var wire 1 \# select $end
+$var wire 1 Q# out $end
+$upscope $end
+$scope module third $end
+$var wire 1 R# in0 $end
+$var wire 1 Q# in1 $end
+$var wire 1 ]# select $end
+$var wire 1 4# out $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module compare13 $end
+$var wire 2 ^# A [1:0] $end
+$var wire 2 _# B [1:0] $end
+$var wire 1 ? EQ0 $end
+$var wire 1 > EQ1 $end
+$var wire 1 0 GT0 $end
+$var wire 1 / GT1 $end
+$var wire 1 `# notB0 $end
+$var wire 1 a# notEQ1 $end
+$var wire 1 b# notGT1 $end
+$var wire 1 c# w1 $end
+$var wire 1 d# w2 $end
+$var wire 3 e# select [2:0] $end
+$var wire 1 f# muxgt $end
+$var wire 1 g# muxeq $end
+$scope module EQMUX $end
+$var wire 1 `# in0 $end
+$var wire 1 h# in1 $end
+$var wire 1 i# in2 $end
+$var wire 1 j# in3 $end
+$var wire 1 k# in4 $end
+$var wire 1 `# in5 $end
+$var wire 1 l# in6 $end
+$var wire 1 m# in7 $end
+$var wire 3 n# select [2:0] $end
+$var wire 1 o# w6 $end
+$var wire 1 p# w5 $end
+$var wire 1 q# w4 $end
+$var wire 1 r# w3 $end
+$var wire 1 s# w2 $end
+$var wire 1 t# w1 $end
+$var wire 1 g# out $end
+$scope module first_1 $end
+$var wire 1 `# in0 $end
+$var wire 1 h# in1 $end
+$var wire 1 u# select $end
+$var wire 1 t# out $end
+$upscope $end
+$scope module first_2 $end
+$var wire 1 i# in0 $end
+$var wire 1 j# in1 $end
+$var wire 1 v# select $end
+$var wire 1 s# out $end
+$upscope $end
+$scope module first_3 $end
+$var wire 1 k# in0 $end
+$var wire 1 `# in1 $end
+$var wire 1 w# select $end
+$var wire 1 r# out $end
+$upscope $end
+$scope module first_4 $end
+$var wire 1 l# in0 $end
+$var wire 1 m# in1 $end
+$var wire 1 x# select $end
+$var wire 1 q# out $end
+$upscope $end
+$scope module second_1 $end
+$var wire 1 t# in0 $end
+$var wire 1 s# in1 $end
+$var wire 1 y# select $end
+$var wire 1 p# out $end
+$upscope $end
+$scope module second_2 $end
+$var wire 1 r# in0 $end
+$var wire 1 q# in1 $end
+$var wire 1 z# select $end
+$var wire 1 o# out $end
+$upscope $end
+$scope module third $end
+$var wire 1 p# in0 $end
+$var wire 1 o# in1 $end
+$var wire 1 {# select $end
+$var wire 1 g# out $end
+$upscope $end
+$upscope $end
+$scope module GTMUX $end
+$var wire 1 |# in0 $end
+$var wire 1 }# in1 $end
+$var wire 1 `# in2 $end
+$var wire 1 ~# in3 $end
+$var wire 1 !$ in4 $end
+$var wire 1 "$ in5 $end
+$var wire 1 #$ in6 $end
+$var wire 1 `# in7 $end
+$var wire 3 $$ select [2:0] $end
+$var wire 1 %$ w6 $end
+$var wire 1 &$ w5 $end
+$var wire 1 '$ w4 $end
+$var wire 1 ($ w3 $end
+$var wire 1 )$ w2 $end
+$var wire 1 *$ w1 $end
+$var wire 1 f# out $end
+$scope module first_1 $end
+$var wire 1 |# in0 $end
+$var wire 1 }# in1 $end
+$var wire 1 +$ select $end
+$var wire 1 *$ out $end
+$upscope $end
+$scope module first_2 $end
+$var wire 1 `# in0 $end
+$var wire 1 ~# in1 $end
+$var wire 1 ,$ select $end
+$var wire 1 )$ out $end
+$upscope $end
+$scope module first_3 $end
+$var wire 1 !$ in0 $end
+$var wire 1 "$ in1 $end
+$var wire 1 -$ select $end
+$var wire 1 ($ out $end
+$upscope $end
+$scope module first_4 $end
+$var wire 1 #$ in0 $end
+$var wire 1 `# in1 $end
+$var wire 1 .$ select $end
+$var wire 1 '$ out $end
+$upscope $end
+$scope module second_1 $end
+$var wire 1 *$ in0 $end
+$var wire 1 )$ in1 $end
+$var wire 1 /$ select $end
+$var wire 1 &$ out $end
+$upscope $end
+$scope module second_2 $end
+$var wire 1 ($ in0 $end
+$var wire 1 '$ in1 $end
+$var wire 1 0$ select $end
+$var wire 1 %$ out $end
+$upscope $end
+$scope module third $end
+$var wire 1 &$ in0 $end
+$var wire 1 %$ in1 $end
+$var wire 1 1$ select $end
+$var wire 1 f# out $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module compare14 $end
+$var wire 2 2$ A [1:0] $end
+$var wire 2 3$ B [1:0] $end
+$var wire 1 @ EQ0 $end
+$var wire 1 ? EQ1 $end
+$var wire 1 1 GT0 $end
+$var wire 1 0 GT1 $end
+$var wire 1 4$ notB0 $end
+$var wire 1 5$ notEQ1 $end
+$var wire 1 6$ notGT1 $end
+$var wire 1 7$ w1 $end
+$var wire 1 8$ w2 $end
+$var wire 3 9$ select [2:0] $end
+$var wire 1 :$ muxgt $end
+$var wire 1 ;$ muxeq $end
+$scope module EQMUX $end
+$var wire 1 4$ in0 $end
+$var wire 1 <$ in1 $end
+$var wire 1 =$ in2 $end
+$var wire 1 >$ in3 $end
+$var wire 1 ?$ in4 $end
+$var wire 1 4$ in5 $end
+$var wire 1 @$ in6 $end
+$var wire 1 A$ in7 $end
+$var wire 3 B$ select [2:0] $end
+$var wire 1 C$ w6 $end
+$var wire 1 D$ w5 $end
+$var wire 1 E$ w4 $end
+$var wire 1 F$ w3 $end
+$var wire 1 G$ w2 $end
+$var wire 1 H$ w1 $end
+$var wire 1 ;$ out $end
+$scope module first_1 $end
+$var wire 1 4$ in0 $end
+$var wire 1 <$ in1 $end
+$var wire 1 I$ select $end
+$var wire 1 H$ out $end
+$upscope $end
+$scope module first_2 $end
+$var wire 1 =$ in0 $end
+$var wire 1 >$ in1 $end
+$var wire 1 J$ select $end
+$var wire 1 G$ out $end
+$upscope $end
+$scope module first_3 $end
+$var wire 1 ?$ in0 $end
+$var wire 1 4$ in1 $end
+$var wire 1 K$ select $end
+$var wire 1 F$ out $end
+$upscope $end
+$scope module first_4 $end
+$var wire 1 @$ in0 $end
+$var wire 1 A$ in1 $end
+$var wire 1 L$ select $end
+$var wire 1 E$ out $end
+$upscope $end
+$scope module second_1 $end
+$var wire 1 H$ in0 $end
+$var wire 1 G$ in1 $end
+$var wire 1 M$ select $end
+$var wire 1 D$ out $end
+$upscope $end
+$scope module second_2 $end
+$var wire 1 F$ in0 $end
+$var wire 1 E$ in1 $end
+$var wire 1 N$ select $end
+$var wire 1 C$ out $end
+$upscope $end
+$scope module third $end
+$var wire 1 D$ in0 $end
+$var wire 1 C$ in1 $end
+$var wire 1 O$ select $end
+$var wire 1 ;$ out $end
+$upscope $end
+$upscope $end
+$scope module GTMUX $end
+$var wire 1 P$ in0 $end
+$var wire 1 Q$ in1 $end
+$var wire 1 4$ in2 $end
+$var wire 1 R$ in3 $end
+$var wire 1 S$ in4 $end
+$var wire 1 T$ in5 $end
+$var wire 1 U$ in6 $end
+$var wire 1 4$ in7 $end
+$var wire 3 V$ select [2:0] $end
+$var wire 1 W$ w6 $end
+$var wire 1 X$ w5 $end
+$var wire 1 Y$ w4 $end
+$var wire 1 Z$ w3 $end
+$var wire 1 [$ w2 $end
+$var wire 1 \$ w1 $end
+$var wire 1 :$ out $end
+$scope module first_1 $end
+$var wire 1 P$ in0 $end
+$var wire 1 Q$ in1 $end
+$var wire 1 ]$ select $end
+$var wire 1 \$ out $end
+$upscope $end
+$scope module first_2 $end
+$var wire 1 4$ in0 $end
+$var wire 1 R$ in1 $end
+$var wire 1 ^$ select $end
+$var wire 1 [$ out $end
+$upscope $end
+$scope module first_3 $end
+$var wire 1 S$ in0 $end
+$var wire 1 T$ in1 $end
+$var wire 1 _$ select $end
+$var wire 1 Z$ out $end
+$upscope $end
+$scope module first_4 $end
+$var wire 1 U$ in0 $end
+$var wire 1 4$ in1 $end
+$var wire 1 `$ select $end
+$var wire 1 Y$ out $end
+$upscope $end
+$scope module second_1 $end
+$var wire 1 \$ in0 $end
+$var wire 1 [$ in1 $end
+$var wire 1 a$ select $end
+$var wire 1 X$ out $end
+$upscope $end
+$scope module second_2 $end
+$var wire 1 Z$ in0 $end
+$var wire 1 Y$ in1 $end
+$var wire 1 b$ select $end
+$var wire 1 W$ out $end
+$upscope $end
+$scope module third $end
+$var wire 1 X$ in0 $end
+$var wire 1 W$ in1 $end
+$var wire 1 c$ select $end
+$var wire 1 :$ out $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module compare15 $end
+$var wire 2 d$ A [1:0] $end
+$var wire 2 e$ B [1:0] $end
+$var wire 1 G EQ0 $end
+$var wire 1 @ EQ1 $end
+$var wire 1 8 GT0 $end
+$var wire 1 1 GT1 $end
+$var wire 1 f$ notB0 $end
+$var wire 1 g$ notEQ1 $end
+$var wire 1 h$ notGT1 $end
+$var wire 1 i$ w1 $end
+$var wire 1 j$ w2 $end
+$var wire 3 k$ select [2:0] $end
+$var wire 1 l$ muxgt $end
+$var wire 1 m$ muxeq $end
+$scope module EQMUX $end
+$var wire 1 f$ in0 $end
+$var wire 1 n$ in1 $end
+$var wire 1 o$ in2 $end
+$var wire 1 p$ in3 $end
+$var wire 1 q$ in4 $end
+$var wire 1 f$ in5 $end
+$var wire 1 r$ in6 $end
+$var wire 1 s$ in7 $end
+$var wire 3 t$ select [2:0] $end
+$var wire 1 u$ w6 $end
+$var wire 1 v$ w5 $end
+$var wire 1 w$ w4 $end
+$var wire 1 x$ w3 $end
+$var wire 1 y$ w2 $end
+$var wire 1 z$ w1 $end
+$var wire 1 m$ out $end
+$scope module first_1 $end
+$var wire 1 f$ in0 $end
+$var wire 1 n$ in1 $end
+$var wire 1 {$ select $end
+$var wire 1 z$ out $end
+$upscope $end
+$scope module first_2 $end
+$var wire 1 o$ in0 $end
+$var wire 1 p$ in1 $end
+$var wire 1 |$ select $end
+$var wire 1 y$ out $end
+$upscope $end
+$scope module first_3 $end
+$var wire 1 q$ in0 $end
+$var wire 1 f$ in1 $end
+$var wire 1 }$ select $end
+$var wire 1 x$ out $end
+$upscope $end
+$scope module first_4 $end
+$var wire 1 r$ in0 $end
+$var wire 1 s$ in1 $end
+$var wire 1 ~$ select $end
+$var wire 1 w$ out $end
+$upscope $end
+$scope module second_1 $end
+$var wire 1 z$ in0 $end
+$var wire 1 y$ in1 $end
+$var wire 1 !% select $end
+$var wire 1 v$ out $end
+$upscope $end
+$scope module second_2 $end
+$var wire 1 x$ in0 $end
+$var wire 1 w$ in1 $end
+$var wire 1 "% select $end
+$var wire 1 u$ out $end
+$upscope $end
+$scope module third $end
+$var wire 1 v$ in0 $end
+$var wire 1 u$ in1 $end
+$var wire 1 #% select $end
+$var wire 1 m$ out $end
+$upscope $end
+$upscope $end
+$scope module GTMUX $end
+$var wire 1 $% in0 $end
+$var wire 1 %% in1 $end
+$var wire 1 f$ in2 $end
+$var wire 1 &% in3 $end
+$var wire 1 '% in4 $end
+$var wire 1 (% in5 $end
+$var wire 1 )% in6 $end
+$var wire 1 f$ in7 $end
+$var wire 3 *% select [2:0] $end
+$var wire 1 +% w6 $end
+$var wire 1 ,% w5 $end
+$var wire 1 -% w4 $end
+$var wire 1 .% w3 $end
+$var wire 1 /% w2 $end
+$var wire 1 0% w1 $end
+$var wire 1 l$ out $end
+$scope module first_1 $end
+$var wire 1 $% in0 $end
+$var wire 1 %% in1 $end
+$var wire 1 1% select $end
+$var wire 1 0% out $end
+$upscope $end
+$scope module first_2 $end
+$var wire 1 f$ in0 $end
+$var wire 1 &% in1 $end
+$var wire 1 2% select $end
+$var wire 1 /% out $end
+$upscope $end
+$scope module first_3 $end
+$var wire 1 '% in0 $end
+$var wire 1 (% in1 $end
+$var wire 1 3% select $end
+$var wire 1 .% out $end
+$upscope $end
+$scope module first_4 $end
+$var wire 1 )% in0 $end
+$var wire 1 f$ in1 $end
+$var wire 1 4% select $end
+$var wire 1 -% out $end
+$upscope $end
+$scope module second_1 $end
+$var wire 1 0% in0 $end
+$var wire 1 /% in1 $end
+$var wire 1 5% select $end
+$var wire 1 ,% out $end
+$upscope $end
+$scope module second_2 $end
+$var wire 1 .% in0 $end
+$var wire 1 -% in1 $end
+$var wire 1 6% select $end
+$var wire 1 +% out $end
+$upscope $end
+$scope module third $end
+$var wire 1 ,% in0 $end
+$var wire 1 +% in1 $end
+$var wire 1 7% select $end
+$var wire 1 l$ out $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module compare16 $end
+$var wire 2 8% A [1:0] $end
+$var wire 2 9% B [1:0] $end
+$var wire 1 $ EQ0 $end
+$var wire 1 G EQ1 $end
+$var wire 1 ) GT0 $end
+$var wire 1 8 GT1 $end
+$var wire 1 :% notB0 $end
+$var wire 1 ;% notEQ1 $end
+$var wire 1 <% notGT1 $end
+$var wire 1 =% w1 $end
+$var wire 1 >% w2 $end
+$var wire 3 ?% select [2:0] $end
+$var wire 1 @% muxgt $end
+$var wire 1 A% muxeq $end
+$scope module EQMUX $end
+$var wire 1 :% in0 $end
+$var wire 1 B% in1 $end
+$var wire 1 C% in2 $end
+$var wire 1 D% in3 $end
+$var wire 1 E% in4 $end
+$var wire 1 :% in5 $end
+$var wire 1 F% in6 $end
+$var wire 1 G% in7 $end
+$var wire 3 H% select [2:0] $end
+$var wire 1 I% w6 $end
+$var wire 1 J% w5 $end
+$var wire 1 K% w4 $end
+$var wire 1 L% w3 $end
+$var wire 1 M% w2 $end
+$var wire 1 N% w1 $end
+$var wire 1 A% out $end
+$scope module first_1 $end
+$var wire 1 :% in0 $end
+$var wire 1 B% in1 $end
+$var wire 1 O% select $end
+$var wire 1 N% out $end
+$upscope $end
+$scope module first_2 $end
+$var wire 1 C% in0 $end
+$var wire 1 D% in1 $end
+$var wire 1 P% select $end
+$var wire 1 M% out $end
+$upscope $end
+$scope module first_3 $end
+$var wire 1 E% in0 $end
+$var wire 1 :% in1 $end
+$var wire 1 Q% select $end
+$var wire 1 L% out $end
+$upscope $end
+$scope module first_4 $end
+$var wire 1 F% in0 $end
+$var wire 1 G% in1 $end
+$var wire 1 R% select $end
+$var wire 1 K% out $end
+$upscope $end
+$scope module second_1 $end
+$var wire 1 N% in0 $end
+$var wire 1 M% in1 $end
+$var wire 1 S% select $end
+$var wire 1 J% out $end
+$upscope $end
+$scope module second_2 $end
+$var wire 1 L% in0 $end
+$var wire 1 K% in1 $end
+$var wire 1 T% select $end
+$var wire 1 I% out $end
+$upscope $end
+$scope module third $end
+$var wire 1 J% in0 $end
+$var wire 1 I% in1 $end
+$var wire 1 U% select $end
+$var wire 1 A% out $end
+$upscope $end
+$upscope $end
+$scope module GTMUX $end
+$var wire 1 V% in0 $end
+$var wire 1 W% in1 $end
+$var wire 1 :% in2 $end
+$var wire 1 X% in3 $end
+$var wire 1 Y% in4 $end
+$var wire 1 Z% in5 $end
+$var wire 1 [% in6 $end
+$var wire 1 :% in7 $end
+$var wire 3 \% select [2:0] $end
+$var wire 1 ]% w6 $end
+$var wire 1 ^% w5 $end
+$var wire 1 _% w4 $end
+$var wire 1 `% w3 $end
+$var wire 1 a% w2 $end
+$var wire 1 b% w1 $end
+$var wire 1 @% out $end
+$scope module first_1 $end
+$var wire 1 V% in0 $end
+$var wire 1 W% in1 $end
+$var wire 1 c% select $end
+$var wire 1 b% out $end
+$upscope $end
+$scope module first_2 $end
+$var wire 1 :% in0 $end
+$var wire 1 X% in1 $end
+$var wire 1 d% select $end
+$var wire 1 a% out $end
+$upscope $end
+$scope module first_3 $end
+$var wire 1 Y% in0 $end
+$var wire 1 Z% in1 $end
+$var wire 1 e% select $end
+$var wire 1 `% out $end
+$upscope $end
+$scope module first_4 $end
+$var wire 1 [% in0 $end
+$var wire 1 :% in1 $end
+$var wire 1 f% select $end
+$var wire 1 _% out $end
+$upscope $end
+$scope module second_1 $end
+$var wire 1 b% in0 $end
+$var wire 1 a% in1 $end
+$var wire 1 g% select $end
+$var wire 1 ^% out $end
+$upscope $end
+$scope module second_2 $end
+$var wire 1 `% in0 $end
+$var wire 1 _% in1 $end
+$var wire 1 h% select $end
+$var wire 1 ]% out $end
+$upscope $end
+$scope module third $end
+$var wire 1 ^% in0 $end
+$var wire 1 ]% in1 $end
+$var wire 1 i% select $end
+$var wire 1 @% out $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module compare2 $end
+$var wire 2 j% A [1:0] $end
+$var wire 2 k% B [1:0] $end
+$var wire 1 B EQ0 $end
+$var wire 1 A EQ1 $end
+$var wire 1 3 GT0 $end
+$var wire 1 2 GT1 $end
+$var wire 1 l% notB0 $end
+$var wire 1 m% notEQ1 $end
+$var wire 1 n% notGT1 $end
+$var wire 1 o% w1 $end
+$var wire 1 p% w2 $end
+$var wire 3 q% select [2:0] $end
+$var wire 1 r% muxgt $end
+$var wire 1 s% muxeq $end
+$scope module EQMUX $end
+$var wire 1 l% in0 $end
+$var wire 1 t% in1 $end
+$var wire 1 u% in2 $end
+$var wire 1 v% in3 $end
+$var wire 1 w% in4 $end
+$var wire 1 l% in5 $end
+$var wire 1 x% in6 $end
+$var wire 1 y% in7 $end
+$var wire 3 z% select [2:0] $end
+$var wire 1 {% w6 $end
+$var wire 1 |% w5 $end
+$var wire 1 }% w4 $end
+$var wire 1 ~% w3 $end
+$var wire 1 !& w2 $end
+$var wire 1 "& w1 $end
+$var wire 1 s% out $end
+$scope module first_1 $end
+$var wire 1 l% in0 $end
+$var wire 1 t% in1 $end
+$var wire 1 #& select $end
+$var wire 1 "& out $end
+$upscope $end
+$scope module first_2 $end
+$var wire 1 u% in0 $end
+$var wire 1 v% in1 $end
+$var wire 1 $& select $end
+$var wire 1 !& out $end
+$upscope $end
+$scope module first_3 $end
+$var wire 1 w% in0 $end
+$var wire 1 l% in1 $end
+$var wire 1 %& select $end
+$var wire 1 ~% out $end
+$upscope $end
+$scope module first_4 $end
+$var wire 1 x% in0 $end
+$var wire 1 y% in1 $end
+$var wire 1 && select $end
+$var wire 1 }% out $end
+$upscope $end
+$scope module second_1 $end
+$var wire 1 "& in0 $end
+$var wire 1 !& in1 $end
+$var wire 1 '& select $end
+$var wire 1 |% out $end
+$upscope $end
+$scope module second_2 $end
+$var wire 1 ~% in0 $end
+$var wire 1 }% in1 $end
+$var wire 1 (& select $end
+$var wire 1 {% out $end
+$upscope $end
+$scope module third $end
+$var wire 1 |% in0 $end
+$var wire 1 {% in1 $end
+$var wire 1 )& select $end
+$var wire 1 s% out $end
+$upscope $end
+$upscope $end
+$scope module GTMUX $end
+$var wire 1 *& in0 $end
+$var wire 1 +& in1 $end
+$var wire 1 l% in2 $end
+$var wire 1 ,& in3 $end
+$var wire 1 -& in4 $end
+$var wire 1 .& in5 $end
+$var wire 1 /& in6 $end
+$var wire 1 l% in7 $end
+$var wire 3 0& select [2:0] $end
+$var wire 1 1& w6 $end
+$var wire 1 2& w5 $end
+$var wire 1 3& w4 $end
+$var wire 1 4& w3 $end
+$var wire 1 5& w2 $end
+$var wire 1 6& w1 $end
+$var wire 1 r% out $end
+$scope module first_1 $end
+$var wire 1 *& in0 $end
+$var wire 1 +& in1 $end
+$var wire 1 7& select $end
+$var wire 1 6& out $end
+$upscope $end
+$scope module first_2 $end
+$var wire 1 l% in0 $end
+$var wire 1 ,& in1 $end
+$var wire 1 8& select $end
+$var wire 1 5& out $end
+$upscope $end
+$scope module first_3 $end
+$var wire 1 -& in0 $end
+$var wire 1 .& in1 $end
+$var wire 1 9& select $end
+$var wire 1 4& out $end
+$upscope $end
+$scope module first_4 $end
+$var wire 1 /& in0 $end
+$var wire 1 l% in1 $end
+$var wire 1 :& select $end
+$var wire 1 3& out $end
+$upscope $end
+$scope module second_1 $end
+$var wire 1 6& in0 $end
+$var wire 1 5& in1 $end
+$var wire 1 ;& select $end
+$var wire 1 2& out $end
+$upscope $end
+$scope module second_2 $end
+$var wire 1 4& in0 $end
+$var wire 1 3& in1 $end
+$var wire 1 <& select $end
+$var wire 1 1& out $end
+$upscope $end
+$scope module third $end
+$var wire 1 2& in0 $end
+$var wire 1 1& in1 $end
+$var wire 1 =& select $end
+$var wire 1 r% out $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module compare3 $end
+$var wire 2 >& A [1:0] $end
+$var wire 2 ?& B [1:0] $end
+$var wire 1 C EQ0 $end
+$var wire 1 B EQ1 $end
+$var wire 1 4 GT0 $end
+$var wire 1 3 GT1 $end
+$var wire 1 @& notB0 $end
+$var wire 1 A& notEQ1 $end
+$var wire 1 B& notGT1 $end
+$var wire 1 C& w1 $end
+$var wire 1 D& w2 $end
+$var wire 3 E& select [2:0] $end
+$var wire 1 F& muxgt $end
+$var wire 1 G& muxeq $end
+$scope module EQMUX $end
+$var wire 1 @& in0 $end
+$var wire 1 H& in1 $end
+$var wire 1 I& in2 $end
+$var wire 1 J& in3 $end
+$var wire 1 K& in4 $end
+$var wire 1 @& in5 $end
+$var wire 1 L& in6 $end
+$var wire 1 M& in7 $end
+$var wire 3 N& select [2:0] $end
+$var wire 1 O& w6 $end
+$var wire 1 P& w5 $end
+$var wire 1 Q& w4 $end
+$var wire 1 R& w3 $end
+$var wire 1 S& w2 $end
+$var wire 1 T& w1 $end
+$var wire 1 G& out $end
+$scope module first_1 $end
+$var wire 1 @& in0 $end
+$var wire 1 H& in1 $end
+$var wire 1 U& select $end
+$var wire 1 T& out $end
+$upscope $end
+$scope module first_2 $end
+$var wire 1 I& in0 $end
+$var wire 1 J& in1 $end
+$var wire 1 V& select $end
+$var wire 1 S& out $end
+$upscope $end
+$scope module first_3 $end
+$var wire 1 K& in0 $end
+$var wire 1 @& in1 $end
+$var wire 1 W& select $end
+$var wire 1 R& out $end
+$upscope $end
+$scope module first_4 $end
+$var wire 1 L& in0 $end
+$var wire 1 M& in1 $end
+$var wire 1 X& select $end
+$var wire 1 Q& out $end
+$upscope $end
+$scope module second_1 $end
+$var wire 1 T& in0 $end
+$var wire 1 S& in1 $end
+$var wire 1 Y& select $end
+$var wire 1 P& out $end
+$upscope $end
+$scope module second_2 $end
+$var wire 1 R& in0 $end
+$var wire 1 Q& in1 $end
+$var wire 1 Z& select $end
+$var wire 1 O& out $end
+$upscope $end
+$scope module third $end
+$var wire 1 P& in0 $end
+$var wire 1 O& in1 $end
+$var wire 1 [& select $end
+$var wire 1 G& out $end
+$upscope $end
+$upscope $end
+$scope module GTMUX $end
+$var wire 1 \& in0 $end
+$var wire 1 ]& in1 $end
+$var wire 1 @& in2 $end
+$var wire 1 ^& in3 $end
+$var wire 1 _& in4 $end
+$var wire 1 `& in5 $end
+$var wire 1 a& in6 $end
+$var wire 1 @& in7 $end
+$var wire 3 b& select [2:0] $end
+$var wire 1 c& w6 $end
+$var wire 1 d& w5 $end
+$var wire 1 e& w4 $end
+$var wire 1 f& w3 $end
+$var wire 1 g& w2 $end
+$var wire 1 h& w1 $end
+$var wire 1 F& out $end
+$scope module first_1 $end
+$var wire 1 \& in0 $end
+$var wire 1 ]& in1 $end
+$var wire 1 i& select $end
+$var wire 1 h& out $end
+$upscope $end
+$scope module first_2 $end
+$var wire 1 @& in0 $end
+$var wire 1 ^& in1 $end
+$var wire 1 j& select $end
+$var wire 1 g& out $end
+$upscope $end
+$scope module first_3 $end
+$var wire 1 _& in0 $end
+$var wire 1 `& in1 $end
+$var wire 1 k& select $end
+$var wire 1 f& out $end
+$upscope $end
+$scope module first_4 $end
+$var wire 1 a& in0 $end
+$var wire 1 @& in1 $end
+$var wire 1 l& select $end
+$var wire 1 e& out $end
+$upscope $end
+$scope module second_1 $end
+$var wire 1 h& in0 $end
+$var wire 1 g& in1 $end
+$var wire 1 m& select $end
+$var wire 1 d& out $end
+$upscope $end
+$scope module second_2 $end
+$var wire 1 f& in0 $end
+$var wire 1 e& in1 $end
+$var wire 1 n& select $end
+$var wire 1 c& out $end
+$upscope $end
+$scope module third $end
+$var wire 1 d& in0 $end
+$var wire 1 c& in1 $end
+$var wire 1 o& select $end
+$var wire 1 F& out $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module compare4 $end
+$var wire 2 p& A [1:0] $end
+$var wire 2 q& B [1:0] $end
+$var wire 1 D EQ0 $end
+$var wire 1 C EQ1 $end
+$var wire 1 5 GT0 $end
+$var wire 1 4 GT1 $end
+$var wire 1 r& notB0 $end
+$var wire 1 s& notEQ1 $end
+$var wire 1 t& notGT1 $end
+$var wire 1 u& w1 $end
+$var wire 1 v& w2 $end
+$var wire 3 w& select [2:0] $end
+$var wire 1 x& muxgt $end
+$var wire 1 y& muxeq $end
+$scope module EQMUX $end
+$var wire 1 r& in0 $end
+$var wire 1 z& in1 $end
+$var wire 1 {& in2 $end
+$var wire 1 |& in3 $end
+$var wire 1 }& in4 $end
+$var wire 1 r& in5 $end
+$var wire 1 ~& in6 $end
+$var wire 1 !' in7 $end
+$var wire 3 "' select [2:0] $end
+$var wire 1 #' w6 $end
+$var wire 1 $' w5 $end
+$var wire 1 %' w4 $end
+$var wire 1 &' w3 $end
+$var wire 1 '' w2 $end
+$var wire 1 (' w1 $end
+$var wire 1 y& out $end
+$scope module first_1 $end
+$var wire 1 r& in0 $end
+$var wire 1 z& in1 $end
+$var wire 1 )' select $end
+$var wire 1 (' out $end
+$upscope $end
+$scope module first_2 $end
+$var wire 1 {& in0 $end
+$var wire 1 |& in1 $end
+$var wire 1 *' select $end
+$var wire 1 '' out $end
+$upscope $end
+$scope module first_3 $end
+$var wire 1 }& in0 $end
+$var wire 1 r& in1 $end
+$var wire 1 +' select $end
+$var wire 1 &' out $end
+$upscope $end
+$scope module first_4 $end
+$var wire 1 ~& in0 $end
+$var wire 1 !' in1 $end
+$var wire 1 ,' select $end
+$var wire 1 %' out $end
+$upscope $end
+$scope module second_1 $end
+$var wire 1 (' in0 $end
+$var wire 1 '' in1 $end
+$var wire 1 -' select $end
+$var wire 1 $' out $end
+$upscope $end
+$scope module second_2 $end
+$var wire 1 &' in0 $end
+$var wire 1 %' in1 $end
+$var wire 1 .' select $end
+$var wire 1 #' out $end
+$upscope $end
+$scope module third $end
+$var wire 1 $' in0 $end
+$var wire 1 #' in1 $end
+$var wire 1 /' select $end
+$var wire 1 y& out $end
+$upscope $end
+$upscope $end
+$scope module GTMUX $end
+$var wire 1 0' in0 $end
+$var wire 1 1' in1 $end
+$var wire 1 r& in2 $end
+$var wire 1 2' in3 $end
+$var wire 1 3' in4 $end
+$var wire 1 4' in5 $end
+$var wire 1 5' in6 $end
+$var wire 1 r& in7 $end
+$var wire 3 6' select [2:0] $end
+$var wire 1 7' w6 $end
+$var wire 1 8' w5 $end
+$var wire 1 9' w4 $end
+$var wire 1 :' w3 $end
+$var wire 1 ;' w2 $end
+$var wire 1 <' w1 $end
+$var wire 1 x& out $end
+$scope module first_1 $end
+$var wire 1 0' in0 $end
+$var wire 1 1' in1 $end
+$var wire 1 =' select $end
+$var wire 1 <' out $end
+$upscope $end
+$scope module first_2 $end
+$var wire 1 r& in0 $end
+$var wire 1 2' in1 $end
+$var wire 1 >' select $end
+$var wire 1 ;' out $end
+$upscope $end
+$scope module first_3 $end
+$var wire 1 3' in0 $end
+$var wire 1 4' in1 $end
+$var wire 1 ?' select $end
+$var wire 1 :' out $end
+$upscope $end
+$scope module first_4 $end
+$var wire 1 5' in0 $end
+$var wire 1 r& in1 $end
+$var wire 1 @' select $end
+$var wire 1 9' out $end
+$upscope $end
+$scope module second_1 $end
+$var wire 1 <' in0 $end
+$var wire 1 ;' in1 $end
+$var wire 1 A' select $end
+$var wire 1 8' out $end
+$upscope $end
+$scope module second_2 $end
+$var wire 1 :' in0 $end
+$var wire 1 9' in1 $end
+$var wire 1 B' select $end
+$var wire 1 7' out $end
+$upscope $end
+$scope module third $end
+$var wire 1 8' in0 $end
+$var wire 1 7' in1 $end
+$var wire 1 C' select $end
+$var wire 1 x& out $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module compare5 $end
+$var wire 2 D' A [1:0] $end
+$var wire 2 E' B [1:0] $end
+$var wire 1 E EQ0 $end
+$var wire 1 D EQ1 $end
+$var wire 1 6 GT0 $end
+$var wire 1 5 GT1 $end
+$var wire 1 F' notB0 $end
+$var wire 1 G' notEQ1 $end
+$var wire 1 H' notGT1 $end
+$var wire 1 I' w1 $end
+$var wire 1 J' w2 $end
+$var wire 3 K' select [2:0] $end
+$var wire 1 L' muxgt $end
+$var wire 1 M' muxeq $end
+$scope module EQMUX $end
+$var wire 1 F' in0 $end
+$var wire 1 N' in1 $end
+$var wire 1 O' in2 $end
+$var wire 1 P' in3 $end
+$var wire 1 Q' in4 $end
+$var wire 1 F' in5 $end
+$var wire 1 R' in6 $end
+$var wire 1 S' in7 $end
+$var wire 3 T' select [2:0] $end
+$var wire 1 U' w6 $end
+$var wire 1 V' w5 $end
+$var wire 1 W' w4 $end
+$var wire 1 X' w3 $end
+$var wire 1 Y' w2 $end
+$var wire 1 Z' w1 $end
+$var wire 1 M' out $end
+$scope module first_1 $end
+$var wire 1 F' in0 $end
+$var wire 1 N' in1 $end
+$var wire 1 [' select $end
+$var wire 1 Z' out $end
+$upscope $end
+$scope module first_2 $end
+$var wire 1 O' in0 $end
+$var wire 1 P' in1 $end
+$var wire 1 \' select $end
+$var wire 1 Y' out $end
+$upscope $end
+$scope module first_3 $end
+$var wire 1 Q' in0 $end
+$var wire 1 F' in1 $end
+$var wire 1 ]' select $end
+$var wire 1 X' out $end
+$upscope $end
+$scope module first_4 $end
+$var wire 1 R' in0 $end
+$var wire 1 S' in1 $end
+$var wire 1 ^' select $end
+$var wire 1 W' out $end
+$upscope $end
+$scope module second_1 $end
+$var wire 1 Z' in0 $end
+$var wire 1 Y' in1 $end
+$var wire 1 _' select $end
+$var wire 1 V' out $end
+$upscope $end
+$scope module second_2 $end
+$var wire 1 X' in0 $end
+$var wire 1 W' in1 $end
+$var wire 1 `' select $end
+$var wire 1 U' out $end
+$upscope $end
+$scope module third $end
+$var wire 1 V' in0 $end
+$var wire 1 U' in1 $end
+$var wire 1 a' select $end
+$var wire 1 M' out $end
+$upscope $end
+$upscope $end
+$scope module GTMUX $end
+$var wire 1 b' in0 $end
+$var wire 1 c' in1 $end
+$var wire 1 F' in2 $end
+$var wire 1 d' in3 $end
+$var wire 1 e' in4 $end
+$var wire 1 f' in5 $end
+$var wire 1 g' in6 $end
+$var wire 1 F' in7 $end
+$var wire 3 h' select [2:0] $end
+$var wire 1 i' w6 $end
+$var wire 1 j' w5 $end
+$var wire 1 k' w4 $end
+$var wire 1 l' w3 $end
+$var wire 1 m' w2 $end
+$var wire 1 n' w1 $end
+$var wire 1 L' out $end
+$scope module first_1 $end
+$var wire 1 b' in0 $end
+$var wire 1 c' in1 $end
+$var wire 1 o' select $end
+$var wire 1 n' out $end
+$upscope $end
+$scope module first_2 $end
+$var wire 1 F' in0 $end
+$var wire 1 d' in1 $end
+$var wire 1 p' select $end
+$var wire 1 m' out $end
+$upscope $end
+$scope module first_3 $end
+$var wire 1 e' in0 $end
+$var wire 1 f' in1 $end
+$var wire 1 q' select $end
+$var wire 1 l' out $end
+$upscope $end
+$scope module first_4 $end
+$var wire 1 g' in0 $end
+$var wire 1 F' in1 $end
+$var wire 1 r' select $end
+$var wire 1 k' out $end
+$upscope $end
+$scope module second_1 $end
+$var wire 1 n' in0 $end
+$var wire 1 m' in1 $end
+$var wire 1 s' select $end
+$var wire 1 j' out $end
+$upscope $end
+$scope module second_2 $end
+$var wire 1 l' in0 $end
+$var wire 1 k' in1 $end
+$var wire 1 t' select $end
+$var wire 1 i' out $end
+$upscope $end
+$scope module third $end
+$var wire 1 j' in0 $end
+$var wire 1 i' in1 $end
+$var wire 1 u' select $end
+$var wire 1 L' out $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module compare6 $end
+$var wire 2 v' A [1:0] $end
+$var wire 2 w' B [1:0] $end
+$var wire 1 F EQ0 $end
+$var wire 1 E EQ1 $end
+$var wire 1 7 GT0 $end
+$var wire 1 6 GT1 $end
+$var wire 1 x' notB0 $end
+$var wire 1 y' notEQ1 $end
+$var wire 1 z' notGT1 $end
+$var wire 1 {' w1 $end
+$var wire 1 |' w2 $end
+$var wire 3 }' select [2:0] $end
+$var wire 1 ~' muxgt $end
+$var wire 1 !( muxeq $end
+$scope module EQMUX $end
+$var wire 1 x' in0 $end
+$var wire 1 "( in1 $end
+$var wire 1 #( in2 $end
+$var wire 1 $( in3 $end
+$var wire 1 %( in4 $end
+$var wire 1 x' in5 $end
+$var wire 1 &( in6 $end
+$var wire 1 '( in7 $end
+$var wire 3 (( select [2:0] $end
+$var wire 1 )( w6 $end
+$var wire 1 *( w5 $end
+$var wire 1 +( w4 $end
+$var wire 1 ,( w3 $end
+$var wire 1 -( w2 $end
+$var wire 1 .( w1 $end
+$var wire 1 !( out $end
+$scope module first_1 $end
+$var wire 1 x' in0 $end
+$var wire 1 "( in1 $end
+$var wire 1 /( select $end
+$var wire 1 .( out $end
+$upscope $end
+$scope module first_2 $end
+$var wire 1 #( in0 $end
+$var wire 1 $( in1 $end
+$var wire 1 0( select $end
+$var wire 1 -( out $end
+$upscope $end
+$scope module first_3 $end
+$var wire 1 %( in0 $end
+$var wire 1 x' in1 $end
+$var wire 1 1( select $end
+$var wire 1 ,( out $end
+$upscope $end
+$scope module first_4 $end
+$var wire 1 &( in0 $end
+$var wire 1 '( in1 $end
+$var wire 1 2( select $end
+$var wire 1 +( out $end
+$upscope $end
+$scope module second_1 $end
+$var wire 1 .( in0 $end
+$var wire 1 -( in1 $end
+$var wire 1 3( select $end
+$var wire 1 *( out $end
+$upscope $end
+$scope module second_2 $end
+$var wire 1 ,( in0 $end
+$var wire 1 +( in1 $end
+$var wire 1 4( select $end
+$var wire 1 )( out $end
+$upscope $end
+$scope module third $end
+$var wire 1 *( in0 $end
+$var wire 1 )( in1 $end
+$var wire 1 5( select $end
+$var wire 1 !( out $end
+$upscope $end
+$upscope $end
+$scope module GTMUX $end
+$var wire 1 6( in0 $end
+$var wire 1 7( in1 $end
+$var wire 1 x' in2 $end
+$var wire 1 8( in3 $end
+$var wire 1 9( in4 $end
+$var wire 1 :( in5 $end
+$var wire 1 ;( in6 $end
+$var wire 1 x' in7 $end
+$var wire 3 <( select [2:0] $end
+$var wire 1 =( w6 $end
+$var wire 1 >( w5 $end
+$var wire 1 ?( w4 $end
+$var wire 1 @( w3 $end
+$var wire 1 A( w2 $end
+$var wire 1 B( w1 $end
+$var wire 1 ~' out $end
+$scope module first_1 $end
+$var wire 1 6( in0 $end
+$var wire 1 7( in1 $end
+$var wire 1 C( select $end
+$var wire 1 B( out $end
+$upscope $end
+$scope module first_2 $end
+$var wire 1 x' in0 $end
+$var wire 1 8( in1 $end
+$var wire 1 D( select $end
+$var wire 1 A( out $end
+$upscope $end
+$scope module first_3 $end
+$var wire 1 9( in0 $end
+$var wire 1 :( in1 $end
+$var wire 1 E( select $end
+$var wire 1 @( out $end
+$upscope $end
+$scope module first_4 $end
+$var wire 1 ;( in0 $end
+$var wire 1 x' in1 $end
+$var wire 1 F( select $end
+$var wire 1 ?( out $end
+$upscope $end
+$scope module second_1 $end
+$var wire 1 B( in0 $end
+$var wire 1 A( in1 $end
+$var wire 1 G( select $end
+$var wire 1 >( out $end
+$upscope $end
+$scope module second_2 $end
+$var wire 1 @( in0 $end
+$var wire 1 ?( in1 $end
+$var wire 1 H( select $end
+$var wire 1 =( out $end
+$upscope $end
+$scope module third $end
+$var wire 1 >( in0 $end
+$var wire 1 =( in1 $end
+$var wire 1 I( select $end
+$var wire 1 ~' out $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module compare7 $end
+$var wire 2 J( A [1:0] $end
+$var wire 2 K( B [1:0] $end
+$var wire 1 9 EQ0 $end
+$var wire 1 F EQ1 $end
+$var wire 1 * GT0 $end
+$var wire 1 7 GT1 $end
+$var wire 1 L( notB0 $end
+$var wire 1 M( notEQ1 $end
+$var wire 1 N( notGT1 $end
+$var wire 1 O( w1 $end
+$var wire 1 P( w2 $end
+$var wire 3 Q( select [2:0] $end
+$var wire 1 R( muxgt $end
+$var wire 1 S( muxeq $end
+$scope module EQMUX $end
+$var wire 1 L( in0 $end
+$var wire 1 T( in1 $end
+$var wire 1 U( in2 $end
+$var wire 1 V( in3 $end
+$var wire 1 W( in4 $end
+$var wire 1 L( in5 $end
+$var wire 1 X( in6 $end
+$var wire 1 Y( in7 $end
+$var wire 3 Z( select [2:0] $end
+$var wire 1 [( w6 $end
+$var wire 1 \( w5 $end
+$var wire 1 ]( w4 $end
+$var wire 1 ^( w3 $end
+$var wire 1 _( w2 $end
+$var wire 1 `( w1 $end
+$var wire 1 S( out $end
+$scope module first_1 $end
+$var wire 1 L( in0 $end
+$var wire 1 T( in1 $end
+$var wire 1 a( select $end
+$var wire 1 `( out $end
+$upscope $end
+$scope module first_2 $end
+$var wire 1 U( in0 $end
+$var wire 1 V( in1 $end
+$var wire 1 b( select $end
+$var wire 1 _( out $end
+$upscope $end
+$scope module first_3 $end
+$var wire 1 W( in0 $end
+$var wire 1 L( in1 $end
+$var wire 1 c( select $end
+$var wire 1 ^( out $end
+$upscope $end
+$scope module first_4 $end
+$var wire 1 X( in0 $end
+$var wire 1 Y( in1 $end
+$var wire 1 d( select $end
+$var wire 1 ]( out $end
+$upscope $end
+$scope module second_1 $end
+$var wire 1 `( in0 $end
+$var wire 1 _( in1 $end
+$var wire 1 e( select $end
+$var wire 1 \( out $end
+$upscope $end
+$scope module second_2 $end
+$var wire 1 ^( in0 $end
+$var wire 1 ]( in1 $end
+$var wire 1 f( select $end
+$var wire 1 [( out $end
+$upscope $end
+$scope module third $end
+$var wire 1 \( in0 $end
+$var wire 1 [( in1 $end
+$var wire 1 g( select $end
+$var wire 1 S( out $end
+$upscope $end
+$upscope $end
+$scope module GTMUX $end
+$var wire 1 h( in0 $end
+$var wire 1 i( in1 $end
+$var wire 1 L( in2 $end
+$var wire 1 j( in3 $end
+$var wire 1 k( in4 $end
+$var wire 1 l( in5 $end
+$var wire 1 m( in6 $end
+$var wire 1 L( in7 $end
+$var wire 3 n( select [2:0] $end
+$var wire 1 o( w6 $end
+$var wire 1 p( w5 $end
+$var wire 1 q( w4 $end
+$var wire 1 r( w3 $end
+$var wire 1 s( w2 $end
+$var wire 1 t( w1 $end
+$var wire 1 R( out $end
+$scope module first_1 $end
+$var wire 1 h( in0 $end
+$var wire 1 i( in1 $end
+$var wire 1 u( select $end
+$var wire 1 t( out $end
+$upscope $end
+$scope module first_2 $end
+$var wire 1 L( in0 $end
+$var wire 1 j( in1 $end
+$var wire 1 v( select $end
+$var wire 1 s( out $end
+$upscope $end
+$scope module first_3 $end
+$var wire 1 k( in0 $end
+$var wire 1 l( in1 $end
+$var wire 1 w( select $end
+$var wire 1 r( out $end
+$upscope $end
+$scope module first_4 $end
+$var wire 1 m( in0 $end
+$var wire 1 L( in1 $end
+$var wire 1 x( select $end
+$var wire 1 q( out $end
+$upscope $end
+$scope module second_1 $end
+$var wire 1 t( in0 $end
+$var wire 1 s( in1 $end
+$var wire 1 y( select $end
+$var wire 1 p( out $end
+$upscope $end
+$scope module second_2 $end
+$var wire 1 r( in0 $end
+$var wire 1 q( in1 $end
+$var wire 1 z( select $end
+$var wire 1 o( out $end
+$upscope $end
+$scope module third $end
+$var wire 1 p( in0 $end
+$var wire 1 o( in1 $end
+$var wire 1 {( select $end
+$var wire 1 R( out $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module compare8 $end
+$var wire 2 |( A [1:0] $end
+$var wire 2 }( B [1:0] $end
+$var wire 1 : EQ0 $end
+$var wire 1 9 EQ1 $end
+$var wire 1 + GT0 $end
+$var wire 1 * GT1 $end
+$var wire 1 ~( notB0 $end
+$var wire 1 !) notEQ1 $end
+$var wire 1 ") notGT1 $end
+$var wire 1 #) w1 $end
+$var wire 1 $) w2 $end
+$var wire 3 %) select [2:0] $end
+$var wire 1 &) muxgt $end
+$var wire 1 ') muxeq $end
+$scope module EQMUX $end
+$var wire 1 ~( in0 $end
+$var wire 1 () in1 $end
+$var wire 1 )) in2 $end
+$var wire 1 *) in3 $end
+$var wire 1 +) in4 $end
+$var wire 1 ~( in5 $end
+$var wire 1 ,) in6 $end
+$var wire 1 -) in7 $end
+$var wire 3 .) select [2:0] $end
+$var wire 1 /) w6 $end
+$var wire 1 0) w5 $end
+$var wire 1 1) w4 $end
+$var wire 1 2) w3 $end
+$var wire 1 3) w2 $end
+$var wire 1 4) w1 $end
+$var wire 1 ') out $end
+$scope module first_1 $end
+$var wire 1 ~( in0 $end
+$var wire 1 () in1 $end
+$var wire 1 5) select $end
+$var wire 1 4) out $end
+$upscope $end
+$scope module first_2 $end
+$var wire 1 )) in0 $end
+$var wire 1 *) in1 $end
+$var wire 1 6) select $end
+$var wire 1 3) out $end
+$upscope $end
+$scope module first_3 $end
+$var wire 1 +) in0 $end
+$var wire 1 ~( in1 $end
+$var wire 1 7) select $end
+$var wire 1 2) out $end
+$upscope $end
+$scope module first_4 $end
+$var wire 1 ,) in0 $end
+$var wire 1 -) in1 $end
+$var wire 1 8) select $end
+$var wire 1 1) out $end
+$upscope $end
+$scope module second_1 $end
+$var wire 1 4) in0 $end
+$var wire 1 3) in1 $end
+$var wire 1 9) select $end
+$var wire 1 0) out $end
+$upscope $end
+$scope module second_2 $end
+$var wire 1 2) in0 $end
+$var wire 1 1) in1 $end
+$var wire 1 :) select $end
+$var wire 1 /) out $end
+$upscope $end
+$scope module third $end
+$var wire 1 0) in0 $end
+$var wire 1 /) in1 $end
+$var wire 1 ;) select $end
+$var wire 1 ') out $end
+$upscope $end
+$upscope $end
+$scope module GTMUX $end
+$var wire 1 <) in0 $end
+$var wire 1 =) in1 $end
+$var wire 1 ~( in2 $end
+$var wire 1 >) in3 $end
+$var wire 1 ?) in4 $end
+$var wire 1 @) in5 $end
+$var wire 1 A) in6 $end
+$var wire 1 ~( in7 $end
+$var wire 3 B) select [2:0] $end
+$var wire 1 C) w6 $end
+$var wire 1 D) w5 $end
+$var wire 1 E) w4 $end
+$var wire 1 F) w3 $end
+$var wire 1 G) w2 $end
+$var wire 1 H) w1 $end
+$var wire 1 &) out $end
+$scope module first_1 $end
+$var wire 1 <) in0 $end
+$var wire 1 =) in1 $end
+$var wire 1 I) select $end
+$var wire 1 H) out $end
+$upscope $end
+$scope module first_2 $end
+$var wire 1 ~( in0 $end
+$var wire 1 >) in1 $end
+$var wire 1 J) select $end
+$var wire 1 G) out $end
+$upscope $end
+$scope module first_3 $end
+$var wire 1 ?) in0 $end
+$var wire 1 @) in1 $end
+$var wire 1 K) select $end
+$var wire 1 F) out $end
+$upscope $end
+$scope module first_4 $end
+$var wire 1 A) in0 $end
+$var wire 1 ~( in1 $end
+$var wire 1 L) select $end
+$var wire 1 E) out $end
+$upscope $end
+$scope module second_1 $end
+$var wire 1 H) in0 $end
+$var wire 1 G) in1 $end
+$var wire 1 M) select $end
+$var wire 1 D) out $end
+$upscope $end
+$scope module second_2 $end
+$var wire 1 F) in0 $end
+$var wire 1 E) in1 $end
+$var wire 1 N) select $end
+$var wire 1 C) out $end
+$upscope $end
+$scope module third $end
+$var wire 1 D) in0 $end
+$var wire 1 C) in1 $end
+$var wire 1 O) select $end
+$var wire 1 &) out $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module compare9 $end
+$var wire 2 P) A [1:0] $end
+$var wire 2 Q) B [1:0] $end
+$var wire 1 ; EQ0 $end
+$var wire 1 : EQ1 $end
+$var wire 1 , GT0 $end
+$var wire 1 + GT1 $end
+$var wire 1 R) notB0 $end
+$var wire 1 S) notEQ1 $end
+$var wire 1 T) notGT1 $end
+$var wire 1 U) w1 $end
+$var wire 1 V) w2 $end
+$var wire 3 W) select [2:0] $end
+$var wire 1 X) muxgt $end
+$var wire 1 Y) muxeq $end
+$scope module EQMUX $end
+$var wire 1 R) in0 $end
+$var wire 1 Z) in1 $end
+$var wire 1 [) in2 $end
+$var wire 1 \) in3 $end
+$var wire 1 ]) in4 $end
+$var wire 1 R) in5 $end
+$var wire 1 ^) in6 $end
+$var wire 1 _) in7 $end
+$var wire 3 `) select [2:0] $end
+$var wire 1 a) w6 $end
+$var wire 1 b) w5 $end
+$var wire 1 c) w4 $end
+$var wire 1 d) w3 $end
+$var wire 1 e) w2 $end
+$var wire 1 f) w1 $end
+$var wire 1 Y) out $end
+$scope module first_1 $end
+$var wire 1 R) in0 $end
+$var wire 1 Z) in1 $end
+$var wire 1 g) select $end
+$var wire 1 f) out $end
+$upscope $end
+$scope module first_2 $end
+$var wire 1 [) in0 $end
+$var wire 1 \) in1 $end
+$var wire 1 h) select $end
+$var wire 1 e) out $end
+$upscope $end
+$scope module first_3 $end
+$var wire 1 ]) in0 $end
+$var wire 1 R) in1 $end
+$var wire 1 i) select $end
+$var wire 1 d) out $end
+$upscope $end
+$scope module first_4 $end
+$var wire 1 ^) in0 $end
+$var wire 1 _) in1 $end
+$var wire 1 j) select $end
+$var wire 1 c) out $end
+$upscope $end
+$scope module second_1 $end
+$var wire 1 f) in0 $end
+$var wire 1 e) in1 $end
+$var wire 1 k) select $end
+$var wire 1 b) out $end
+$upscope $end
+$scope module second_2 $end
+$var wire 1 d) in0 $end
+$var wire 1 c) in1 $end
+$var wire 1 l) select $end
+$var wire 1 a) out $end
+$upscope $end
+$scope module third $end
+$var wire 1 b) in0 $end
+$var wire 1 a) in1 $end
+$var wire 1 m) select $end
+$var wire 1 Y) out $end
+$upscope $end
+$upscope $end
+$scope module GTMUX $end
+$var wire 1 n) in0 $end
+$var wire 1 o) in1 $end
+$var wire 1 R) in2 $end
+$var wire 1 p) in3 $end
+$var wire 1 q) in4 $end
+$var wire 1 r) in5 $end
+$var wire 1 s) in6 $end
+$var wire 1 R) in7 $end
+$var wire 3 t) select [2:0] $end
+$var wire 1 u) w6 $end
+$var wire 1 v) w5 $end
+$var wire 1 w) w4 $end
+$var wire 1 x) w3 $end
+$var wire 1 y) w2 $end
+$var wire 1 z) w1 $end
+$var wire 1 X) out $end
+$scope module first_1 $end
+$var wire 1 n) in0 $end
+$var wire 1 o) in1 $end
+$var wire 1 {) select $end
+$var wire 1 z) out $end
+$upscope $end
+$scope module first_2 $end
+$var wire 1 R) in0 $end
+$var wire 1 p) in1 $end
+$var wire 1 |) select $end
+$var wire 1 y) out $end
+$upscope $end
+$scope module first_3 $end
+$var wire 1 q) in0 $end
+$var wire 1 r) in1 $end
+$var wire 1 }) select $end
+$var wire 1 x) out $end
+$upscope $end
+$scope module first_4 $end
+$var wire 1 s) in0 $end
+$var wire 1 R) in1 $end
+$var wire 1 ~) select $end
+$var wire 1 w) out $end
+$upscope $end
+$scope module second_1 $end
+$var wire 1 z) in0 $end
+$var wire 1 y) in1 $end
+$var wire 1 !* select $end
+$var wire 1 v) out $end
+$upscope $end
+$scope module second_2 $end
+$var wire 1 x) in0 $end
+$var wire 1 w) in1 $end
+$var wire 1 "* select $end
+$var wire 1 u) out $end
+$upscope $end
+$scope module third $end
+$var wire 1 v) in0 $end
+$var wire 1 u) in1 $end
+$var wire 1 #* select $end
+$var wire 1 X) out $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0#*
+1"*
+1!*
+1~)
+1})
+1|)
+1{)
+0z)
+0y)
+0x)
+1w)
+0v)
+1u)
+b11 t)
+1s)
+0r)
+1q)
+0p)
+0o)
+0n)
+0m)
+1l)
+1k)
+1j)
+1i)
+1h)
+1g)
+0f)
+0e)
+1d)
+0c)
+0b)
+0a)
+b11 `)
+0_)
+0^)
+0])
+0\)
+0[)
+0Z)
+0Y)
+0X)
+b11 W)
+0V)
+0U)
+1T)
+1S)
+1R)
+b10 Q)
+b1 P)
+0O)
+1N)
+1M)
+1L)
+1K)
+1J)
+1I)
+0H)
+0G)
+0F)
+1E)
+0D)
+1C)
+b11 B)
+1A)
+0@)
+1?)
+0>)
+0=)
+0<)
+0;)
+1:)
+19)
+18)
+17)
+16)
+15)
+04)
+03)
+12)
+01)
+00)
+0/)
+b11 .)
+0-)
+0,)
+0+)
+0*)
+0))
+0()
+0')
+0&)
+b11 %)
+0$)
+0#)
+1")
+1!)
+1~(
+b10 }(
+b1 |(
+0{(
+1z(
+1y(
+1x(
+1w(
+1v(
+1u(
+0t(
+0s(
+0r(
+1q(
+0p(
+1o(
+b11 n(
+1m(
+0l(
+1k(
+0j(
+0i(
+0h(
+0g(
+1f(
+1e(
+1d(
+1c(
+1b(
+1a(
+0`(
+0_(
+1^(
+0](
+0\(
+0[(
+b11 Z(
+0Y(
+0X(
+0W(
+0V(
+0U(
+0T(
+0S(
+0R(
+b11 Q(
+0P(
+0O(
+1N(
+1M(
+1L(
+b10 K(
+b1 J(
+0I(
+1H(
+1G(
+1F(
+1E(
+1D(
+1C(
+0B(
+0A(
+0@(
+1?(
+0>(
+1=(
+b11 <(
+1;(
+0:(
+19(
+08(
+07(
+06(
+05(
+14(
+13(
+12(
+11(
+10(
+1/(
+0.(
+0-(
+1,(
+0+(
+0*(
+0)(
+b11 ((
+0'(
+0&(
+0%(
+0$(
+0#(
+0"(
+0!(
+0~'
+b11 }'
+0|'
+0{'
+1z'
+1y'
+1x'
+b10 w'
+b1 v'
+0u'
+1t'
+1s'
+1r'
+1q'
+1p'
+1o'
+0n'
+0m'
+0l'
+1k'
+0j'
+1i'
+b11 h'
+1g'
+0f'
+1e'
+0d'
+0c'
+0b'
+0a'
+1`'
+1_'
+1^'
+1]'
+1\'
+1['
+0Z'
+0Y'
+1X'
+0W'
+0V'
+0U'
+b11 T'
+0S'
+0R'
+0Q'
+0P'
+0O'
+0N'
+0M'
+0L'
+b11 K'
+0J'
+0I'
+1H'
+1G'
+1F'
+b10 E'
+b1 D'
+0C'
+1B'
+1A'
+1@'
+1?'
+1>'
+1='
+0<'
+0;'
+0:'
+19'
+08'
+17'
+b11 6'
+15'
+04'
+13'
+02'
+01'
+00'
+0/'
+1.'
+1-'
+1,'
+1+'
+1*'
+1)'
+0('
+0''
+1&'
+0%'
+0$'
+0#'
+b11 "'
+0!'
+0~&
+0}&
+0|&
+0{&
+0z&
+0y&
+0x&
+b11 w&
+0v&
+0u&
+1t&
+1s&
+1r&
+b10 q&
+b1 p&
+0o&
+1n&
+1m&
+1l&
+1k&
+1j&
+1i&
+0h&
+0g&
+0f&
+1e&
+0d&
+1c&
+b11 b&
+1a&
+0`&
+1_&
+0^&
+0]&
+0\&
+0[&
+1Z&
+1Y&
+1X&
+1W&
+1V&
+1U&
+0T&
+0S&
+1R&
+0Q&
+0P&
+0O&
+b11 N&
+0M&
+0L&
+0K&
+0J&
+0I&
+0H&
+0G&
+0F&
+b11 E&
+0D&
+0C&
+1B&
+1A&
+1@&
+b10 ?&
+b1 >&
+0=&
+1<&
+1;&
+1:&
+19&
+18&
+17&
+06&
+05&
+04&
+13&
+02&
+11&
+b11 0&
+1/&
+0.&
+1-&
+0,&
+0+&
+0*&
+0)&
+1(&
+1'&
+1&&
+1%&
+1$&
+1#&
+0"&
+0!&
+1~%
+0}%
+0|%
+0{%
+b11 z%
+0y%
+0x%
+0w%
+0v%
+0u%
+0t%
+0s%
+0r%
+b11 q%
+0p%
+0o%
+1n%
+1m%
+1l%
+b10 k%
+b1 j%
+0i%
+1h%
+1g%
+1f%
+1e%
+1d%
+1c%
+0b%
+0a%
+0`%
+1_%
+0^%
+1]%
+b11 \%
+1[%
+0Z%
+1Y%
+0X%
+0W%
+0V%
+0U%
+1T%
+1S%
+1R%
+1Q%
+1P%
+1O%
+0N%
+0M%
+1L%
+0K%
+0J%
+0I%
+b11 H%
+0G%
+0F%
+0E%
+0D%
+0C%
+0B%
+0A%
+0@%
+b11 ?%
+0>%
+0=%
+1<%
+1;%
+1:%
+b10 9%
+b1 8%
+07%
+16%
+15%
+14%
+13%
+12%
+11%
+00%
+0/%
+0.%
+1-%
+0,%
+1+%
+b11 *%
+1)%
+0(%
+1'%
+0&%
+0%%
+0$%
+0#%
+1"%
+1!%
+1~$
+1}$
+1|$
+1{$
+0z$
+0y$
+1x$
+0w$
+0v$
+0u$
+b11 t$
+0s$
+0r$
+0q$
+0p$
+0o$
+0n$
+0m$
+0l$
+b11 k$
+0j$
+0i$
+1h$
+1g$
+1f$
+b10 e$
+b1 d$
+0c$
+1b$
+1a$
+1`$
+1_$
+1^$
+1]$
+0\$
+0[$
+0Z$
+1Y$
+0X$
+1W$
+b11 V$
+1U$
+0T$
+1S$
+0R$
+0Q$
+0P$
+0O$
+1N$
+1M$
+1L$
+1K$
+1J$
+1I$
+0H$
+0G$
+1F$
+0E$
+0D$
+0C$
+b11 B$
+0A$
+0@$
+0?$
+0>$
+0=$
+0<$
+0;$
+0:$
+b11 9$
+08$
+07$
+16$
+15$
+14$
+b10 3$
+b1 2$
+01$
+10$
+1/$
+1.$
+1-$
+1,$
+1+$
+0*$
+0)$
+0($
+1'$
+0&$
+1%$
+b11 $$
+1#$
+0"$
+1!$
+0~#
+0}#
+0|#
+0{#
+1z#
+1y#
+1x#
+1w#
+1v#
+1u#
+0t#
+0s#
+1r#
+0q#
+0p#
+0o#
+b11 n#
+0m#
+0l#
+0k#
+0j#
+0i#
+0h#
+0g#
+0f#
+b11 e#
+0d#
+0c#
+1b#
+1a#
+1`#
+b10 _#
+b1 ^#
+0]#
+1\#
+1[#
+1Z#
+1Y#
+1X#
+1W#
+0V#
+0U#
+0T#
+1S#
+0R#
+1Q#
+b11 P#
+1O#
+0N#
+1M#
+0L#
+0K#
+0J#
+0I#
+1H#
+1G#
+1F#
+1E#
+1D#
+1C#
+0B#
+0A#
+1@#
+0?#
+0>#
+0=#
+b11 <#
+0;#
+0:#
+09#
+08#
+07#
+06#
+05#
+04#
+b11 3#
+02#
+01#
+10#
+1/#
+1.#
+b10 -#
+b1 ,#
+0+#
+1*#
+1)#
+1(#
+1'#
+1&#
+1%#
+0$#
+0##
+0"#
+1!#
+0~"
+1}"
+b11 |"
+1{"
+0z"
+1y"
+0x"
+0w"
+0v"
+0u"
+1t"
+1s"
+1r"
+1q"
+1p"
+1o"
+0n"
+0m"
+1l"
+0k"
+0j"
+0i"
+b11 h"
+0g"
+0f"
+0e"
+0d"
+0c"
+0b"
+0a"
+0`"
+b11 _"
+0^"
+0]"
+1\"
+1["
+1Z"
+b10 Y"
+b1 X"
+0W"
+1V"
+1U"
+1T"
+1S"
+1R"
+1Q"
+0P"
+0O"
+0N"
+1M"
+0L"
+1K"
+b11 J"
+1I"
+0H"
+1G"
+0F"
+0E"
+0D"
+0C"
+1B"
+1A"
+1@"
+1?"
+1>"
+1="
+0<"
+0;"
+1:"
+09"
+08"
+07"
+b11 6"
+05"
+04"
+03"
+02"
+01"
+00"
+0/"
+0."
+b11 -"
+0,"
+0+"
+1*"
+1)"
+1("
+b10 '"
+b1 &"
+0%"
+1$"
+1#"
+1""
+1!"
+1~
+1}
+0|
+0{
+0z
+1y
+0x
+1w
+b11 v
+1u
+0t
+1s
+0r
+0q
+0p
+0o
+1n
+1m
+1l
+1k
+1j
+1i
+0h
+0g
+1f
+0e
+0d
+0c
+b11 b
+0a
+0`
+0_
+0^
+0]
+0\
+0[
+0Z
+b11 Y
+0X
+0W
+1V
+0U
+1T
+0S
+1R
+b10 Q
+b1 P
+0O
+1N
+1M
+1L
+1K
+b1 J
+0I
+1H
+0G
+0F
+0E
+0D
+0C
+0B
+0A
+0@
+0?
+0>
+0=
+0<
+0;
+0:
+09
+08
+07
+06
+05
+04
+03
+02
+01
+00
+0/
+0.
+0-
+0,
+0+
+0*
+0)
+b1 (
+1'
+b10101010101010101010101010101010 &
+b1010101010101010101010101010101 %
+0$
+1#
+b10101010101010101010101010101010 "
+b1010101010101010101010101010101 !
+$end
+#20
