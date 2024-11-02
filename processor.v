@@ -62,68 +62,283 @@ module processor(
 	output [31:0] data_writeReg;
 	input [31:0] data_readRegA, data_readRegB;
 
-    wire [31:0] FD_PC, DX_PC, PC_plus;
-    wire [31:0] FD_IR, DX_IR, XM_IR, MW_IR;
-    wire [31:0] A, B, inB;
-    wire [31:0] MW_O, XM_O;
-    wire [31:0] ALUout;
-    wire Cout_PCinc;
+    wire [31:0] FD_PC, FD_IR;
+    wire [31:0] DX_PC, DX_IR, DX_A, DX_B;
+    wire [31:0] XM_IR, XM_O, XM_B;
+    wire [31:0] MW_IR, MW_O, MW_D;
+
+
+
+// Opcodes --> wires
+    wire D_add, X_add, M_add, W_add, D_addi, X_addi, M_addi, W_addi, 
+    D_sub, X_sub, M_sub, W_sub, D_and, X_and, M_and, W_and, 
+    D_or, X_or, M_or, W_or, D_sll, X_sll, M_sll, W_sll, D_sra, X_sra, M_sra, W_sra, 
+    D_mul, X_mul, M_mul, W_mul, D_div, X_div, M_div, W_div, D_sw, X_sw, M_sw, W_sw, 
+    D_lw, X_lw, M_lw, W_lw, D_j, X_j, M_j, W_j, D_bne, X_bne, M_bne, W_bne, 
+    D_jal, X_jal, M_jal, W_jal, D_jr, X_jr, M_jr, W_jr, D_blt, X_blt, M_blt, W_blt, 
+    D_bex, X_bex, M_bex, W_bex, D_setx, X_setx, M_setx, W_setx;
+
+    // R-type
+    // add
+    assign D_add = (FD_IR[31:27] == 5'b00000) & (FD_IR[6:2] == 5'b00000);
+    assign X_add = (DX_IR[31:27] == 5'b00000) & (DX_IR[6:2] == 5'b00000);
+    assign M_add = (XM_IR[31:27] == 5'b00000) & (XM_IR[6:2] == 5'b00000);
+    assign W_add = (MW_IR[31:27] == 5'b00000) & (MW_IR[6:2] == 5'b00000);
+
+    // sub
+    assign D_sub = (FD_IR[31:27] == 5'b00000) & (FD_IR[6:2] == 5'b00001);
+    assign X_sub = (DX_IR[31:27] == 5'b00000) & (DX_IR[6:2] == 5'b00001);
+    assign M_sub = (XM_IR[31:27] == 5'b00000) & (XM_IR[6:2] == 5'b00001);
+    assign W_sub = (MW_IR[31:27] == 5'b00000) & (MW_IR[6:2] == 5'b00001);
+
+    // and
+    assign D_and = (FD_IR[31:27] == 5'b00000) & (FD_IR[6:2] == 5'b00010);
+    assign X_and = (DX_IR[31:27] == 5'b00000) & (DX_IR[6:2] == 5'b00010);
+    assign M_and = (XM_IR[31:27] == 5'b00000) & (XM_IR[6:2] == 5'b00010);
+    assign W_and = (MW_IR[31:27] == 5'b00000) & (MW_IR[6:2] == 5'b00010);
+
+    // or
+    assign D_or = (FD_IR[31:27] == 5'b00000) & (FD_IR[6:2] == 5'b00011);
+    assign X_or = (DX_IR[31:27] == 5'b00000) & (DX_IR[6:2] == 5'b00011);
+    assign M_or = (XM_IR[31:27] == 5'b00000) & (XM_IR[6:2] == 5'b00011);
+    assign W_or = (MW_IR[31:27] == 5'b00000) & (MW_IR[6:2] == 5'b00011);
+
+    // sll
+    assign D_sll = (FD_IR[31:27] == 5'b00000) & (FD_IR[6:2] == 5'b00100);
+    assign X_sll = (DX_IR[31:27] == 5'b00000) & (DX_IR[6:2] == 5'b00100);
+    assign M_sll = (XM_IR[31:27] == 5'b00000) & (XM_IR[6:2] == 5'b00100);
+    assign W_sll = (MW_IR[31:27] == 5'b00000) & (MW_IR[6:2] == 5'b00100);
+
+    // sra
+    assign D_sra = (FD_IR[31:27] == 5'b00000) & (FD_IR[6:2] == 5'b00101);
+    assign X_sra = (DX_IR[31:27] == 5'b00000) & (DX_IR[6:2] == 5'b00101);
+    assign M_sra = (XM_IR[31:27] == 5'b00000) & (XM_IR[6:2] == 5'b00101);
+    assign W_sra = (MW_IR[31:27] == 5'b00000) & (MW_IR[6:2] == 5'b00101);
+
+    // mul
+    assign D_mul = (FD_IR[31:27] == 5'b00000) & (FD_IR[6:2] == 5'b00110);
+    assign X_mul = (DX_IR[31:27] == 5'b00000) & (DX_IR[6:2] == 5'b00110);
+    assign M_mul = (XM_IR[31:27] == 5'b00000) & (XM_IR[6:2] == 5'b00110);
+    assign W_mul = (MW_IR[31:27] == 5'b00000) & (MW_IR[6:2] == 5'b00110);
+
+    // div
+    assign D_div = (FD_IR[31:27] == 5'b00000) & (FD_IR[6:2] == 5'b00111);
+    assign X_div = (DX_IR[31:27] == 5'b00000) & (DX_IR[6:2] == 5'b00111);
+    assign M_div = (XM_IR[31:27] == 5'b00000) & (XM_IR[6:2] == 5'b00111);
+    assign W_div = (MW_IR[31:27] == 5'b00000) & (MW_IR[6:2] == 5'b00111);
+
+    // I-type and J-type
+    // addi
+    assign D_addi = (FD_IR[31:27] == 5'b00101);
+    assign X_addi = (DX_IR[31:27] == 5'b00101);
+    assign M_addi = (XM_IR[31:27] == 5'b00101);
+    assign W_addi = (MW_IR[31:27] == 5'b00101);
+
+    // sw
+    assign D_sw = (FD_IR[31:27] == 5'b00111);
+    assign X_sw = (DX_IR[31:27] == 5'b00111);
+    assign M_sw = (XM_IR[31:27] == 5'b00111);
+    assign W_sw = (MW_IR[31:27] == 5'b00111);
+
+    // lw
+    assign D_lw = (FD_IR[31:27] == 5'b01000);
+    assign X_lw = (DX_IR[31:27] == 5'b01000);
+    assign M_lw = (XM_IR[31:27] == 5'b01000);
+    assign W_lw = (MW_IR[31:27] == 5'b01000);
+
+    // j
+    assign D_j = (FD_IR[31:27] == 5'b00001);
+    assign X_j = (DX_IR[31:27] == 5'b00001);
+    assign M_j = (XM_IR[31:27] == 5'b00001);
+    assign W_j = (MW_IR[31:27] == 5'b00001);
+
+    // bne
+    assign D_bne = (FD_IR[31:27] == 5'b00010);
+    assign X_bne = (DX_IR[31:27] == 5'b00010);
+    assign M_bne = (XM_IR[31:27] == 5'b00010);
+    assign W_bne = (MW_IR[31:27] == 5'b00010);
+
+    // jal
+    assign D_jal = (FD_IR[31:27] == 5'b00011);
+    assign X_jal = (DX_IR[31:27] == 5'b00011);
+    assign M_jal = (XM_IR[31:27] == 5'b00011);
+    assign W_jal = (MW_IR[31:27] == 5'b00011);
+
+    // jr
+    assign D_jr = (FD_IR[31:27] == 5'b00100);
+    assign X_jr = (DX_IR[31:27] == 5'b00100);
+    assign M_jr = (XM_IR[31:27] == 5'b00100);
+    assign W_jr = (MW_IR[31:27] == 5'b00100);
+
+    // blt
+    assign D_blt = (FD_IR[31:27] == 5'b00110);
+    assign X_blt = (DX_IR[31:27] == 5'b00110);
+    assign M_blt = (XM_IR[31:27] == 5'b00110);
+    assign W_blt = (MW_IR[31:27] == 5'b00110);
+
+    // bex
+    assign D_bex = (FD_IR[31:27] == 5'b10110);
+    assign X_bex = (DX_IR[31:27] == 5'b10110);
+    assign M_bex = (XM_IR[31:27] == 5'b10110);
+    assign W_bex = (MW_IR[31:27] == 5'b10110);
+
+    // setx
+    assign D_setx = (FD_IR[31:27] == 5'b10101);
+    assign X_setx = (DX_IR[31:27] == 5'b10101);
+    assign M_setx = (XM_IR[31:27] == 5'b10101);
+    assign W_setx = (MW_IR[31:27] == 5'b10101);
+
+
 
 // Fetch
-	register PC(.q(address_imem), .d(PC_plus), .clk(clock), .en(1'b1), .clr(1'b0));
+    wire [31:0] F_PCplus, F_PCin, FD_IRin;
+	register PC(.q(address_imem), .d(F_PCin), .clk(~clock), .en(~stall), .clr(1'b0));
 
-    adder PCplus(.A(address_imem), .B(32'b0), .Cin(1'b1), .S(PC_plus), .Cout(Cout_PCinc));
+    adder PCplus(.A(address_imem), .B(32'b0), .Cin(1'b1), .S(F_PCplus), .Cout());
+
+    assign X_JorB = ((X_bne&X_notEqual) | (X_blt&X_lessThan) | (X_bex & (DX_B != 32'b0)) | X_j | X_jal | X_jr);
+    assign F_PCin = X_JorB ? X_target : F_PCplus;
+
+    assign FD_IRin = X_JorB ? 32'b0 : q_imem;
+
 
 // Decode
     // Define FD latch
-    register FDPC(.q(FD_PC), .d(PC_plus), .clk(~clock), .en(1'b1), .clr(1'b0));
-    register FDIR(.q(FD_IR), .d(q_imem), .clk(~clock), .en(1'b1), .clr(1'b0));
+    wire [31:0] FD_IRout;
+    register FDPC(.q(FD_PC), .d(F_PCplus), .clk(~clock), .en(~stall), .clr(1'b0));
+    register FDIR(.q(FD_IRout), .d(FD_IRin), .clk(~clock), .en(~stall), .clr(1'b0));
 
-    assign ctrl_writeEnable = 1'b1;
-    assign ctrl_writeReg = MW_IR[26:22];
+    assign FD_IR = X_JorB ? 32'b0 : FD_IRout;
     assign ctrl_readRegA = FD_IR[21:17];
-    assign ctrl_readRegB = FD_IR[16:12];
-    assign data_writeReg = MW_O;
+    assign ctrl_readRegB = (D_sw | D_jr | D_bne | D_blt) ? FD_IR[26:22] : 
+                            D_bex ? 5'd30 :
+                            FD_IR[16:12];
+    
 
 // Execute
+    wire [31:0] X_inB;
     // Define DX latch
-    register DXPC(.q(DX_PC), .d(FD_PC), .clk(~clock), .en(1'b1), .clr(1'b0));
-    register DXIR(.q(DX_IR), .d(FD_IR), .clk(~clock), .en(1'b1), .clr(1'b0));
-    register DXA(.q(A), .d(data_readRegA), .clk(~clock), .en(1'b1), .clr(1'b0));
-    register DXB(.q(B), .d(data_readRegB), .clk(~clock), .en(1'b1), .clr(1'b0));
+    register DXPC(.q(DX_PC), .d(FD_PC), .clk(~clock), .en(~stall), .clr(1'b0));
+    register DXIR(.q(DX_IR), .d(FD_IR), .clk(~clock), .en(~stall), .clr(1'b0));
+    register DXA(.q(DX_A), .d(data_readRegA), .clk(~clock), .en(~stall), .clr(1'b0));
+    register DXB(.q(DX_B), .d(data_readRegB), .clk(~clock), .en(~stall), .clr(1'b0));
 
     // Immediate
     wire I;
-    assign I = ~DX_IR[31] & ~DX_IR[30] & DX_IR[29] & ~DX_IR[28] & DX_IR[27];
+    assign I = X_addi | X_sw | X_lw | X_bne | X_blt;
 
     wire [31:0] immediate;
     assign immediate [16:0] = DX_IR[16:0];
     assign immediate [31:17] = DX_IR[16] ? 15'b111111111111111 : 15'b0;
-    assign inB = I ? immediate : B;
+    assign X_inB = I ? immediate : DX_B;
+
+
+
 
     // Opcode
-    wire [4:0] ALUopcode;
-    assign ALUopcode = I ? 5'b0 : DX_IR[6:2];
+    wire [4:0] X_ALUop;
+    assign X_ALUop = I ? 5'b0 : DX_IR[6:2];
 
     // Shamt
     wire [4:0] shamt;
-    assign shamt = I ? 5'b0 : DX_IR[11:7];
+    assign shamt = (X_sra|X_sll) ? DX_IR[11:7] : 5'b0;
 
-    alu ALU(.data_operandA(A), .data_operandB(inB), 
-        .ctrl_ALUopcode(ALUopcode), .ctrl_shiftamt(shamt), 
-        .data_result(ALUout), 
-        .isNotEqual(), .isLessThan(), .overflow());
+    // ALU
+    wire [31:0] X_aluOUT, X_aluRESULT, X_aluSTATUS;
+    wire X_aluOVF;
+
+    wire [31:0] X_inA;
+    assign X_inA = (X_blt | X_bne) ? DX_PC : DX_A;
+
+    alu ALU(.data_operandA(X_inA), .data_operandB(X_inB), 
+        .ctrl_ALUopcode(X_ALUop), .ctrl_shiftamt(shamt), 
+        .data_result(X_aluRESULT), 
+        .isNotEqual(), .isLessThan(), .overflow(X_aluOVF));
+
+    // Handle ALU exceptions
+    assign X_aluSTATUS =    X_add ? 32'd1 :
+                            X_addi ? 32'd2 :
+                            X_sub ? 32'd3 : 
+                            32'b0;
+            
+    assign X_aluOUT = (X_aluOVF&(X_addi|X_add|X_sub)) ? X_aluSTATUS : X_aluRESULT;
+
+    // multdiv
+    wire X_multdivRDY, X_multdivEXC;
+    wire [31:0] X_multdivOUT, X_multdivRESULT, X_muldivSTATUS;
+    wire X_ctrlmult, X_ctrldiv, stall;
+
+    assign stall = (X_mul | X_div) & ~X_multdivRDY;
+
+    ctrlgen CTRLMULT(.clk(clock), .condition(X_mul), .ctrl(X_ctrlmult));    // Generate ctrl_mult and ctrl_div signals
+    ctrlgen CTRLDIV(.clk(clock), .condition(X_div), .ctrl(X_ctrldiv));
+
+    multdiv MULTDIV(.data_operandA(DX_A), .data_operandB(DX_B), .ctrl_MULT(X_ctrlmult), .ctrl_DIV(X_ctrldiv), .clock(clock), 
+	.data_result(X_multdivRESULT), .data_exception(X_multdivEXC), .data_resultRDY(X_multdivRDY));
+
+    assign X_muldivSTATUS = X_mul ? 32'd4 : 32'd5;
+    assign X_multdivOUT = X_multdivEXC ? X_muldivSTATUS : X_multdivRESULT;
+    
+    // Choose OUTPUT
+    wire [31:0] X_out;
+
+    assign X_out = (X_mul | X_div) ? X_multdivOUT : 
+                    X_jal ? DX_PC :
+                    X_setx ? d_target :
+                    X_aluOUT;
+
+
+    // Change $rd to rstatus if exception/overflow
+    wire [31:0] X_newIR;
+
+    assign X_newIR[26:22] = X_jal ? 5'd31 : 
+                            ((X_aluOVF & (X_add|X_addi|X_sub)) | (X_multdivEXC & X_multdivRDY&(X_mul|X_div)) | X_setx) ? 5'd30 : 
+                            DX_IR[26:22];
+
+    assign X_newIR[31:27] = DX_IR[31:27];
+    assign X_newIR[21:0] = DX_IR[21:0];
+
+
+    // Jumps
+    wire [31:0] X_target, X_jalOUT, d_target;
+    assign d_target[26:0] = DX_IR[26:0];
+    assign d_target[31:27] = 5'b0;
+    assign X_target =   X_jr ? DX_B : 
+                        X_blt | X_bne ? X_aluOUT :
+                        d_target;
+
+
+    // Branches (blt, bne)
+    wire X_notEqual, X_lessThan;
+
+    alu LT_NEQ(.data_operandA(DX_B), .data_operandB(DX_A),                     // Reverse order (B-A), where B is $rd and A is $rs
+        .ctrl_ALUopcode(5'b00001), .ctrl_shiftamt(), 
+        .data_result(), 
+        .isNotEqual(X_notEqual), .isLessThan(X_lessThan), .overflow());     //ALU only to compute neq and lt
+
+
+
 
 // Memory
     // Define XM latch
-    register XMIR(.q(XM_IR), .d(DX_IR), .clk(~clock), .en(1'b1), .clr(1'b0));
-    register XMO(.q(XM_O), .d(ALUout), .clk(~clock), .en(1'b1), .clr(1'b0));
+    register XMIR(.q(XM_IR), .d(X_newIR), .clk(~clock), .en(~stall), .clr(1'b0));
+    register XMO(.q(XM_O), .d(X_out), .clk(~clock), .en(~stall), .clr(1'b0));
+    register XMB(.q(XM_B), .d(DX_B), .clk(~clock), .en(~stall), .clr(1'b0));
 
-    
-    
+    assign address_dmem = XM_O;
+    assign data = XM_B;
+    assign wren = M_sw;
+
 // Writeback
     // Define MW latch
-    register MWIR(.q(MW_IR), .d(XM_IR), .clk(~clock), .en(1'b1), .clr(1'b0));
-    register MWO(.q(MW_O), .d(XM_O), .clk(~clock), .en(1'b1), .clr(1'b0));
+    register MWIR(.q(MW_IR), .d(XM_IR), .clk(~clock), .en(~stall), .clr(1'b0));
+    register MWO(.q(MW_O), .d(XM_O), .clk(~clock), .en(~stall), .clr(1'b0));
+    register MWD(.q(MW_D), .d(q_dmem), .clk(~clock), .en(~stall), .clr(1'b0));
+
+    assign data_writeReg = W_lw ? MW_D : MW_O;
+
+    assign ctrl_writeEnable = W_add | W_addi | W_sub | W_and | W_or | W_sll | W_sra | W_mul | W_div | W_lw | W_jal | W_setx;
+
+    assign ctrl_writeReg = MW_IR[26:22];
 
 endmodule

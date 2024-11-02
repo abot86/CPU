@@ -35,7 +35,7 @@ module Wrapper (clock, reset);
 
 
 	// ADD YOUR MEMORY FILE HERE
-	localparam INSTR_FILE = "baby_neg";
+	localparam INSTR_FILE = "control";
 	
 	// Main Processing Unit
 	processor CPU(.clock(clock), .reset(reset), 

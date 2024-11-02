@@ -142,7 +142,7 @@ module multdiv(
 
     assign inP [64:33] = outAdd;
     assign inP [32:0] = outP[32:0];
-    sra SHIFTP(pShifted, inP, 5'b0010);
+    sra65 SHIFTP(pShifted, inP, 5'b0010);
 
 //Counter logic
     wire multRDY;

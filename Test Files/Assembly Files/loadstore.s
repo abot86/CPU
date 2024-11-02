@@ -1,5 +1,3 @@
-.text
-
 nop 			# Basic Arithmetic Test with no Hazards
 nop 			# Values initialized using addi (positive only) and sub
 nop 			# Author: Oliver Rodas
@@ -13,9 +11,10 @@ addi $2, $0, 21	# r2 = 21
 sub $3, $0, $3	# r3 = -1
 sub $4, $0, $4	# r4 = -35
 nop 
-nop 			# Negative Value Tests
-addi $11, $2, -89	# r11 = r2 - 89 = -68
-add $12, $4, $2	# r12 = r4 + r2 = -14
-sub $13, $4, $2	# r13 = r4 - r2 = -56
-sll $14, $3, 16	# r14 = r3 << 16 = -65536
-sra $15, $4, 16	# r15 = r4 >> 16 = -1
+nop 			# Load/Store Tests
+sw $1, 1($0) 	# mem[1] = r1 = 3
+sw $2, 2($0) 	# mem[2] = r2 = 21
+sw $3, 0($1) 	# mem[r1] = r3 = -1 (should be mem[3])
+lw $16, 1($0) 	# r16 = mem[1] = 3
+lw $17, 2($0) 	# r17 = mem[2] = 21
+lw $18, 0($1) 	# r18 = mem[3] = -1

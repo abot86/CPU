@@ -33,7 +33,7 @@
  *
  **/
 
-module Wrapper_tb #(parameter FILE = "baby_neg");
+module Wrapper_tb #(parameter FILE = "control");
 
 	// FileData
 	localparam DIR = "Test Files/";
