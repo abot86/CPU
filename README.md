@@ -1,5 +1,5 @@
 # Processor
-## NAME (NETID)
+## Ayush Botke (ab973)
 
 ## Description of Design
 
