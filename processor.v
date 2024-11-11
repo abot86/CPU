@@ -362,23 +362,23 @@ module processor(
     // Bypass logic signals
     wire MX, WX, MX_inB, WX_inB, WM;
 
-    assign MX = (X_newIR[21:17] == XM_IR[26:22]) & 
-                (|X_newIR[26:22]) & (|XM_IR[26:22]);
-                
-    assign WX = ((X_newIR[21:17] == MW_IR[26:22]) & ctrl_writeEnable) |
+    assign MX = (((X_newIR[21:17] == XM_IR[26:22])) & 
+                (|X_newIR[26:22]) & (|XM_IR[26:22])) & ~M_sw;
+
+    assign WX = (((X_newIR[21:17] == MW_IR[26:22]) & ctrl_writeEnable) |
                 ((X_bne | X_blt) & (X_newIR[21:17] == MW_IR[26:22])) & 
-                (|X_newIR[26:22]) & (|MW_IR[26:22]);
+                (|X_newIR[26:22]) & (|MW_IR[26:22])) & ~W_sw;
 
-    assign MX_inB = ((X_newIR[16:12] == XM_IR[26:22]) | 
-                    ((X_jr | X_bne | X_blt) & (X_newIR[26:22] == XM_IR[26:22]))) &
+    assign MX_inB = (((X_newIR[16:12] == XM_IR[26:22]) | 
+                    ((X_jr | X_bne | X_blt) &  (X_newIR[26:22] == XM_IR[26:22]))) &
                     (|X_newIR[26:22]) & (|XM_IR[26:22]) |
-                    (X_bex & M_setx);
+                    (X_bex & M_setx)) & ~M_sw;
 
-    assign WX_inB = ((X_newIR[16:12] == MW_IR[26:22]) | 
+    assign WX_inB = (((X_newIR[16:12] == MW_IR[26:22]) | 
                     ((X_jr | X_bne | X_blt) & (X_newIR[26:22] == MW_IR[26:22])) |
                     (X_sw & (X_newIR[26:22] == MW_IR[26:22]))) &
                     (|X_newIR[26:22]) & (|MW_IR[26:22]) |
-                    (X_bex & W_setx);
+                    (X_bex & W_setx)) & ~W_sw;
 
     assign WM = M_sw & ctrl_writeEnable & (MW_IR[26:22] == XM_IR[26:22]);
 
