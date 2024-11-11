@@ -364,6 +364,7 @@ module processor(
 
     assign MX = (X_newIR[21:17] == XM_IR[26:22]) & 
                 (|X_newIR[26:22]) & (|XM_IR[26:22]);
+                
     assign WX = ((X_newIR[21:17] == MW_IR[26:22]) & ctrl_writeEnable) |
                 ((X_bne | X_blt) & (X_newIR[21:17] == MW_IR[26:22])) & 
                 (|X_newIR[26:22]) & (|MW_IR[26:22]);
@@ -372,10 +373,6 @@ module processor(
                     ((X_jr | X_bne | X_blt) & (X_newIR[26:22] == XM_IR[26:22]))) &
                     (|X_newIR[26:22]) & (|XM_IR[26:22]) |
                     (X_bex & M_setx);
-
-
-    // assign WX_inB = ((X_newIR[16:12] == MW_IR[26:22])) &
-    //                 (|X_newIR[26:22]) & (|MW_IR[26:22]);
 
     assign WX_inB = ((X_newIR[16:12] == MW_IR[26:22]) | 
                     ((X_jr | X_bne | X_blt) & (X_newIR[26:22] == MW_IR[26:22])) |
