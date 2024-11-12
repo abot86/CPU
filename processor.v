@@ -193,11 +193,12 @@ module processor(
 //FETCH
     wire [31:0] F_PCplus, F_PCin, FD_IRin;
     wire STALL, X_JorB;
-	register PC(.q(address_imem), .d(F_PCin), .clk(~clock), .en(~(multdivSTALL | STALL)), .clr(1'b0));
 
-    adder PCplus(.A(address_imem), .B(32'b0), .Cin(1'b1), .S(F_PCplus), .Cout());
+	register PC(.q(address_imem), .d(F_PCin), .clk(~clock), .en(~(multdivSTALL | STALL)), .clr(1'b0));  // Store PC
 
-    assign X_JorB = ((X_bne&X_notEqual) | (X_blt&X_lessThan) | (X_bex & (X_inBbypass != 32'b0)) | X_j | X_jal | X_jr);
+    adder PCplus(.A(address_imem), .B(32'b0), .Cin(1'b1), .S(F_PCplus), .Cout());   // Increment PC by 1
+
+    assign X_JorB = ((X_bne&X_notEqual) | (X_blt&X_lessThan) | (X_bex & (X_inBbypass != 32'b0)) | X_j | X_jal | X_jr);  // Is a branch or jump taken?
     assign F_PCin = X_JorB ? X_target : F_PCplus;
 
     assign FD_IRin = X_JorB ? 32'b0 : q_imem;
@@ -216,6 +217,7 @@ module processor(
     assign FD_IR = (X_JorB | STALL) ? 32'b0 : FD_IRout;
 
     assign ctrl_readRegA = FD_IR[21:17];
+    // Read from $rd if sw, jr, bne, or blt; Read from $r30 if bex
     assign ctrl_readRegB = (D_sw | D_jr | D_bne | D_blt) ? FD_IR[26:22] : 
                             D_bex ? 5'd30 :
                             FD_IR[16:12];
@@ -231,12 +233,13 @@ module processor(
 
 // Immediate
     wire I;
-    assign I = X_addi | X_sw | X_lw | X_bne | X_blt;
+    assign I = X_addi | X_sw | X_lw | X_bne | X_blt;    // Is instruction an I type?
 
     wire [31:0] immediate;
     assign immediate [16:0] = DX_IR[16:0];
     assign immediate [31:17] = DX_IR[16] ? 15'b111111111111111 : 15'b0;
     
+    // Take WX or MX bypass?
     assign X_inBbypass =    WX_inB ? W_writeReg :
                             MX_inB ? XM_O :
                             DX_B;
@@ -262,7 +265,7 @@ module processor(
                         WX ? W_writeReg :
                         DX_A;
 
-    assign X_inA = (X_blt | X_bne) ? DX_PC : X_inAbypass;
+    assign X_inA = (X_blt | X_bne) ? DX_PC : X_inAbypass;   // Use PC for target arithmetic (PC + N)
 
     alu ALU(.data_operandA(X_inA), .data_operandB(X_inB), 
         .ctrl_ALUopcode(X_ALUop), .ctrl_shiftamt(shamt), 
@@ -270,6 +273,7 @@ module processor(
         .isNotEqual(), .isLessThan(), .overflow(X_aluOVF));
 
 // Handle ALU exceptions
+
     assign X_aluSTATUS =    X_add ? 32'd1 :
                             X_addi ? 32'd2 :
                             X_sub ? 32'd3 : 
@@ -361,7 +365,8 @@ module processor(
 
     // Bypass logic signals
     wire MX, WX, MX_inB, WX_inB, WM;
-
+    
+    // Never bypass from sw
     assign MX = (((X_newIR[21:17] == XM_IR[26:22])) & 
                 (|X_newIR[26:22]) & (|XM_IR[26:22])) & ~M_sw;
 
